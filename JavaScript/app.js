@@ -32,25 +32,25 @@ var typeWriter = function(id) {
   // show cursor on next line
   var typeTime = fullText.length * typeSpeed + 100;
   setTimeout(function() {
-    document.getElementById('test').className = 'visible';
+    document.getElementById('cursor-line').className = 'visible';
   }, typeTime);
 };
 
 setTimeout(function() {
-  document.getElementById('test').className = 'hidden';
-  typeWriter('type-this');
+  document.getElementById('cursor-line').className = 'hidden';
+  typeWriter('line1');
 }, typeWait);
 
 var delayTime1 = typeWait 
-  + document.getElementById('type-this').innerHTML.length * typeSpeed 
+  + document.getElementById('line1').innerHTML.length * typeSpeed 
   + 50 + typeGap;
 
 setTimeout(function() {
-  document.getElementById('test').className = 'hidden';
-  typeWriter('type-that');
+  document.getElementById('cursor-line').className = 'hidden';
+  typeWriter('line2');
 }, delayTime1);
 
-var delayTime2 = document.getElementById('type-that').innerHTML.length * typeSpeed + typeGap;
+var delayTime2 = document.getElementById('line2').innerHTML.length * typeSpeed + typeGap;
 
 setTimeout(function() {
   document.getElementById('accept-button').className = 'visible';
