@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+
+main {
+  max-width: 960px;
+  min-width: 560px;
+  margin: 36px auto;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 12px 0px;
+  font-size: 2.2em;
+}
+
+span#header2 {
+  font-weight: 400;
+}
+
+footer {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+section.screen {
+  background-color: black;
+  font-family: monospace;
+  color: #00F500;
+  padding: 24px;
+  margin: 12px 0px;
+  min-height: 240px;
+  font-size: 1.75em;
+}
+
+section.screen p {
+  margin: 12px;
+}
+
+section.screen button {
+  border: 2px solid #00F500;
+  border-radius: 6px;
+  background-color: black;
+  padding: 4px 12px;
+  display: block;
+  margin: 0px auto;
+}
+
+section.screen button:hover {
+  background-color: #00F500;
+  color: black;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* blinking cursor animation */
+.typed-cursor{
+  opacity: 1;
+  -webkit-animation: blink 0.95s infinite;
+  -moz-animation: blink 0.95s infinite;
+  -ms-animation: blink 0.95s infinite;
+  -o-animation: blink 0.95s infinite;
+  animation: blink 0.95s infinite;
+}
+
+@-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
