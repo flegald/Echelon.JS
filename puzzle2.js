@@ -41,9 +41,9 @@ setTimeout(function() {
   typeWriter('line1');
 }, typeWait);
 
-// var delayTime1 = typeWait
-//   + document.getElementById('line1').innerHTML.length * typeSpeed
-//   + 50 + typeGap;
+var delayTime1 = typeWait
+  + document.getElementById('line1').innerHTML.length * typeSpeed
+  + 50 + typeGap;
 
 setTimeout(function() {
   document.getElementById('cursor-line').className = 'hidden';
@@ -70,3 +70,53 @@ $('#accept-button').on('click', function(){
 });
 
 
+//Add Event Listen buttons functions:
+var ansa = document.getElementById('ansa');
+var ansb = document.getElementById('ansb');
+var ansc = document.getElementById('ansc');
+var ansd = document.getElementById('ansd');
+var response = document.getElementById('response');
+var cont = document.getElementById('continue');
+ansa.addEventListener('click', function(e) {
+  event.preventDefault();
+  response.className="visible"
+  ansa.className="hidden";
+  ansb.className="hidden";
+  ansc.className="hidden";
+  ansd.className="hidden";
+
+});
+
+ansb.addEventListener('click', function(e) {
+  event.preventDefault();
+  response.className="visible";
+  cont.className="hidden";
+  ansa.className="hidden";
+  ansb.className="hidden";
+  ansc.className="hidden";
+  ansd.className="hidden";
+  });
+ansc.addEventListener('click', function(e) {
+  event.preventDefault();
+  response.className="visible";
+  cont.className="hidden";
+  ansa.className="hidden";
+  ansb.className="hidden";
+  ansc.className="hidden";
+  ansd.className="hidden";
+
+});
+
+ansd.addEventListener('click', function(e){
+  response.className="visible";
+  cont.className="hidden";
+  ansa.className="hidden";
+  ansb.className="hidden";
+  ansc.className="hidden";
+  ansd.className="hidden";
+
+});
+
+response.addEventListener('click', function(e) {
+  window.location= "http://www.google.com";
+});
