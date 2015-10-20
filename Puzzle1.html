@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title></title>
+	<link type = "text/css" rel = "stylesheet" href = "puzze1.css">
+</head>
+
+<body>
+<main>
+	<h1>ECHELON.JS</h1>
+	<section class="progress"></section>
+	<section class="screen">
+<article class="question>"><code>var nebulae_Position = function (x, y, z) {</br>
+	var locate = x * z;</br>
+	var rad = y + z;</br>
+	var tri = Math.floor((locate - y) + (rad - x));</br>
+	return tri;</br>
+}</br>
+
+nebulae_Position(2.7, 3.2, 4.5)</code></br></br>
+The Nebulae Posistion function will return 13.95
+
+
+<form>
+<button id="wroButt">TRUE</button></br>
+<button id = "corButt">FALSE</button></br>
+</form>
+</article>
+<article>
+<div id="end" class = "hidden">
+	<div id="correct"><p>Correct</p></div>
+	<div id="wrong"><p>Wrong</p></div>
+</br>
+<p id = "explain">The term "Math.floor" eliminates the decimal of a value and rounds it to the lowest whole number</p>
+<button id = "cont">CONTINUE</button>
+</div>
+</article>
+</section>
+
+
+<script src="testboo.js"></script>
+</main>
+</body>
+</html>
