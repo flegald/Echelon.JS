@@ -18,7 +18,7 @@
 
   <section class="screen">
     <article class="question">
-     <code>
+    <!--  <code> -->
       <p> var Agent = function(alias, country, killCount, completed){<br/>
           this.alias = alias;<br />
           this.country = country;<br />
@@ -35,8 +35,17 @@
           Agent.tracker = function(){<br />
           if(this.alias === agent0||agent1){<br />
           contact(this.alias);<br />
-          };<br /> </p>
-      </code>
+          };<br /> <br /></p>
+<!--       </code> -->
+
+    <form>
+      <p class="hidden" id="line1">Agent.Tracker is a:</p>
+      <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p>
+      <button  id="ansa">Method </button>
+      <button id="ansb">Function</button>
+      <button  id="ansc">Property</button>
+      <button id="ansd">Variable</button>
+    </form>
 
     </article>
 
@@ -46,7 +55,7 @@
       <a href="index.html">Home</a> &bull;
       <a href="">About Us</a>
     </footer>
-    <script type="text/javascript" src="JavaScript/app.js"></script>
+    <script type="text/javascript" src="puzzle2.js"></script>
   </main>
 </body>
 </html>
