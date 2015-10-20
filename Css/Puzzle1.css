@@ -46,6 +46,9 @@ section.screen button {
   padding: 4px 12px;
   display: block;
   margin: 0px auto;
+  color: #00F500;
+  font-family: monospace;
+  font-size: 1em;
 }
 
 section.screen button:hover {
