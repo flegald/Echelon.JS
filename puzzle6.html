@@ -20,15 +20,29 @@
     <article class="question">
      <code>
       <p>1. var Eclipse = function(terra, beam, xtype) {<br />
-         2. &nbsp;var terra:<input type="text" id="ans1"><br />
-         3. &nbsp;var beam: <input type="text" id="ans2"><br />
-         4. &nbsp;var xtype:<input type="text" id="ans3"><br />
-         5. &nbsp;function dream() {<input type="text" id="ans4">
+         2. &nbsp;var terra<br />
+         3. &nbsp;var beam<br />
+         4. &nbsp;var xtype<br />
+         5. &nbsp;function dream() {<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (this.xtype === "berg"){<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return(math.random() * this.beam);<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (this.terra.length > 4){<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+         &nbsp;&nbsp;&nbsp;};<br />
+         &nbsp;var lumas =new Eclipse("celium", 186.72, 'droid');<br />
+         &nbsp;lumas.dream();
       </p>
       </code>
 
     <form>
-      <p>Rewrite Lines 2,3,4 and 5 to make the script run properly</p>
+      <p>Rewrite Lines 2, 3, 4 and 5 to make the script run properly</p>
+      <p>Line2:<input type="text" id="ans1"></p>
+      <p>Line3:<input type="text" id="ans2"></p>
+      <p>Line4:<input type="text" id="ans3"></p>
+      <p>Line5:<input type="text" id="ans4"></p>
+
       <button id="ansa">Submit</button>
           </form>
 
