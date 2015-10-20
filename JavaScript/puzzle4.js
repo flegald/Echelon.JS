@@ -1,7 +1,7 @@
 var submitButton = document.getElementById('submit-button');
 submitButton.addEventListener('click', function(e){
   e.preventDefault();
-  if (document.getElementById('ans-true').checked) {
+  if (document.getElementById('ans-false').checked) {
     document.getElementById('res-correct').className = 'visible';
   } else {
     document.getElementById('res-wrong').className = 'visible';
