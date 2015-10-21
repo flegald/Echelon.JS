@@ -3,6 +3,10 @@ var corAns = document.getElementById('corButt');
 var show = document.getElementById('end');
 var cont =  document.getElementById('cont')
 
+var currentStage = 1;
+localize(1);
+console.log(currentStage);
+
 timerAll(90,'end');
 
 corAns.addEventListener('click', function(e){
@@ -11,7 +15,7 @@ corAns.addEventListener('click', function(e){
   document.getElementById('wrong').className = ('hidden');
   wroAns.className = ('hidden');
   corAns.className = ('hidden');
-
+  localize(2);
 });
 
 
