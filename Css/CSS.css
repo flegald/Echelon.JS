@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 
-/* content wrapper */
+/* ------- content wrapper ------- */
 main {
   max-width: 960px;
   min-width: 560px;
@@ -84,10 +84,16 @@ footer {
   text-transform: uppercase;
   text-align: right;
   letter-spacing: 2px;
+  color: #777;
 }
 
 a {
+  color: #777;
+  text-decoration: none;
+}
 
+a:hover {
+  color: #00F500;
 }
 
 /* ------- black screen content ------- */
@@ -104,7 +110,7 @@ section.screen article {
   padding: 24px;
 }
 
-code, code p {
+code {
   font-size: 0.75em;
   color: #DDD;
   line-height: 1;
@@ -141,13 +147,13 @@ input[type="text"]:focus {
   border: 2px solid white;
 }
 
-/* typewriter for intro page */
+/* ------- hide content ------- */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
-/* blinking cursor animation */
+/* ----- blinking cursor animation ----- */
 .typed-cursor{
   opacity: 1;
   -webkit-animation: blink 0.95s infinite;
