@@ -13,3 +13,7 @@ submitButton.addEventListener('click', function(e){
     document.getElementById('res-wrong').className = 'visible';
   }
 });
+document.getElementById('return-button').addEventListener('click', function(e){
+	event.preventDefault();
+	window.location.href = 'Fail.html';
+})

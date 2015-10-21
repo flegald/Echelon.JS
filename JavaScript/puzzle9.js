@@ -12,6 +12,7 @@ if ((anOne.value == 12 && anTwo.value == 'undefined') || (anOne.value == 12 && a
 	show.className = ('visible');
 	document.getElementById('wroAns').className = ('hidden');
   submitButt.className = "hidden";
+  document.getElementById('return-button').className = 'hidden';
 } else {
 	show.className = ('visible');
 	document.getElementById('corAns').className = ('hidden');
@@ -24,3 +25,8 @@ if ((anOne.value == 12 && anTwo.value == 'undefined') || (anOne.value == 12 && a
 cont.addEventListener('click', function(e){
   window.location = "puzzle10.html";
 });
+
+document.getElementById('return-button').addEventListener('click', function(e){
+	event.preventDefault();
+	window.location = 'Fail.html';
+})

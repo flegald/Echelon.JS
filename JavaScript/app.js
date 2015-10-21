@@ -56,6 +56,11 @@ setTimeout(function() {
   document.getElementById('accept-button').className = 'visible';
 }, delayTime1 + delayTime2);
 
+// Specific for Fail.html button
+setTimeout(function() {
+  document.getElementById('return-button').className = 'visible';
+}, delayTime1 + delayTime2);
+
 
 // keypress and click listeners for moving to the first puzzle
 $(document).keypress(function(key){
@@ -66,5 +71,10 @@ $(document).keypress(function(key){
 });
 
 $('#accept-button').on('click', function(){
-  window.location.href = 'http://www.google.com';
+  window.location.href = 'puzzle1.html';
+});
+
+// Button specific to the Fail.html page redirecting to the index
+$('#return-button').on('click', function(){
+  window.location.href = 'index.html';
 });

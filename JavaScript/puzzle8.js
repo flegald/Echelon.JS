@@ -53,3 +53,8 @@ wrongC.addEventListener('click', function(e){
   wrongC.className = 'hidden';
 });
 
+document.getElementById('return-button').addEventListener('click', function(e){
+  event.preventDefault();
+  window.location.href = 'Fail.html';
+})
+

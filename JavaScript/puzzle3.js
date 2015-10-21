@@ -14,6 +14,7 @@ subButton.addEventListener('click', function(e){
 		show.className = ('visible');
 		document.getElementById('wroAns').className = ('hidden');
 		subButton.className = ('hidden');
+		document.getElementById('return-button').className = 'hidden';
 	} else {
 		show.className = ('visible');
 		contin.className = ('hidden');
@@ -24,5 +25,10 @@ subButton.addEventListener('click', function(e){
 
 contin.addEventListener('click', function(e){
 	event.preventDefault();
-	window.location.href = ("puzzle4.html");
+	window.location.href = ('puzzle4.html');
+})
+
+document.getElementById('return-button').addEventListener('click', function(e){
+	event.preventDefault();
+	window.location.href = ('Fail.html');
 })

@@ -22,3 +22,8 @@ var contButton = document.getElementById('cont');
 contButton.addEventListener('click', function(){
   window.location.href = 'puzzle8.html';
 });
+
+document.getElementById('return-button').addEventListener('click', function(e){
+  event.preventDefault();
+  window.location.href = 'Fail.html';
+})

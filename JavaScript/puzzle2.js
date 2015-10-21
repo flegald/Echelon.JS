@@ -16,6 +16,7 @@ ansa.addEventListener('click', function(e) {
   ansb.className="hidden";
   ansc.className="hidden";
   ansd.className="hidden";
+  document.getElementById('return-button').className = 'hidden';
 
 });
 
@@ -48,6 +49,10 @@ ansd.addEventListener('click', function(e){
   ansc.className="hidden";
   ansd.className="hidden";
 
+});
+
+document.getElementById('return-button').addEventListener('click', function(e){
+  window.location = 'Fail.html';
 });
 
 cont.addEventListener('click', function(e) {
