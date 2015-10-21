@@ -7,54 +7,67 @@ var resCorrect = document.getElementById('res-correct');
 var resWrong = document.getElementById('res-wrong');
 var resContain = document.getElementById('res-contain');
 
-timerAll( 90, 'res-contain');
+var currentStage;
+getLocal();
 
-buttonRight.addEventListener('click', function(e){
-  e.preventDefault();
-  resContain.className = 'visible';
-  resCorrect.className = 'visible';
-  buttonGo.className = 'visible';
-  buttonRight.className = 'hidden';
-  wrongA.className = 'hidden';
-  wrongB.className = 'hidden';
-  wrongC.className = 'hidden';
-});
+if (currentStage < 8) {
+  window.location.href = 'index.html';
+  console.log("Cheater");
+} else {
 
-buttonGo.addEventListener('click', function(e){
-  e.preventDefault();
-  window.location.href="puzzle9.html";
-});
+  timerAll( 90, 'res-contain');
 
-wrongA.addEventListener('click', function(e){
-  e.preventDefault();
-  resContain.className = 'visible';
-  resWrong.className = 'visible';
-  buttonRight.className = 'hidden';
-  wrongA.className = 'hidden';
-  wrongB.className = 'hidden';
-  wrongC.className = 'hidden';
-});
-wrongB.addEventListener('click', function(e){
-  e.preventDefault();
-  resContain.className = 'visible';
-  resWrong.className = 'visible';
-  buttonRight.className = 'hidden';
-  wrongA.className = 'hidden';
-  wrongB.className = 'hidden';
-  wrongC.className = 'hidden';
-});
-wrongC.addEventListener('click', function(e){
-  e.preventDefault();
-  resContain.className = 'visible';
-  resWrong.className = 'visible';
-  buttonRight.className = 'hidden';
-  wrongA.className = 'hidden';
-  wrongB.className = 'hidden';
-  wrongC.className = 'hidden';
-});
+  buttonRight.addEventListener('click', function(e){
+    e.preventDefault();
+    localize(9);
+    resContain.className = 'visible';
+    resCorrect.className = 'visible';
+    buttonGo.className = 'visible';
+    buttonRight.className = 'hidden';
+    wrongA.className = 'hidden';
+    wrongB.className = 'hidden';
+    wrongC.className = 'hidden';
+  });
 
+<<<<<<< HEAD
 document.getElementById('return-button').addEventListener('click', function(e){
   event.preventDefault();
   window.location.href = 'Fail.html';
 })
 
+=======
+  buttonGo.addEventListener('click', function(e){
+    e.preventDefault();
+    window.location.href="puzzle9.html";
+  });
+
+  wrongA.addEventListener('click', function(e){
+    e.preventDefault();
+    resContain.className = 'visible';
+    resWrong.className = 'visible';
+    buttonRight.className = 'hidden';
+    wrongA.className = 'hidden';
+    wrongB.className = 'hidden';
+    wrongC.className = 'hidden';
+  });
+  wrongB.addEventListener('click', function(e){
+    e.preventDefault();
+    resContain.className = 'visible';
+    resWrong.className = 'visible';
+    buttonRight.className = 'hidden';
+    wrongA.className = 'hidden';
+    wrongB.className = 'hidden';
+    wrongC.className = 'hidden';
+  });
+  wrongC.addEventListener('click', function(e){
+    e.preventDefault();
+    resContain.className = 'visible';
+    resWrong.className = 'visible';
+    buttonRight.className = 'hidden';
+    wrongA.className = 'hidden';
+    wrongB.className = 'hidden';
+    wrongC.className = 'hidden';
+  });
+
+}
+>>>>>>> master

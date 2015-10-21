@@ -6,27 +6,15 @@ var submit = document.getElementById('submit');
 var cont = document.getElementById('cont');
 var wrong = document.getElementById('wrong');
 
-timerAll( 90, 'response');
+var currentStage;
+getLocal();
 
-submit.addEventListener('click', function(e){
-  event.preventDefault();
-  var str1 = ans1.value.replace(/\s/g, '');
-  var str2 = ans2.value.replace(/\s/g, '');
-  var str3 = ans3.value.replace(/\s/g, '');
-  var str4 = ans4.value.replace(/\s/g, '');
-  if(str1 === 'this.terra=terra;' &&
-     str2 === 'this.beam=beam;' &&
-     str3 === 'this.xtype=xtype;' &&
-     str4 === 'this.dream=function(){') {
-  response.className="visible";
-  submit.className="hidden";
+if (currentStage < 6) {
+  window.location.href = 'index.html';
+  console.log("Cheater");
 } else {
-  response.className="visible";
-  wrong.className="visible";
-  cont.className = "hidden";
-};
-});
 
+<<<<<<< HEAD
 cont.addEventListener('click', function(e) {
   event.preventDefault();
   window.location ="puzzle7.html";
@@ -36,3 +24,33 @@ document.getElementById('return-button').addEventListener('click', function(e){
   event.preventDefault();
   window.location = "Fail.html";
 })
+=======
+  timerAll( 90, 'response');
+
+  submit.addEventListener('click', function(e){
+    event.preventDefault();
+    var str1 = ans1.value.replace(/\s/g, '');
+    var str2 = ans2.value.replace(/\s/g, '');
+    var str3 = ans3.value.replace(/\s/g, '');
+    var str4 = ans4.value.replace(/\s/g, '');
+    if(str1 === 'this.terra=terra;' &&
+       str2 === 'this.beam=beam;' &&
+       str3 === 'this.xtype=xtype;' &&
+       str4 === 'this.dream=function(){') {
+      response.className="visible";
+      submit.className="hidden";
+      localize(7);
+    } else {
+      response.className="visible";
+      wrong.className="visible";
+      cont.className = "hidden";
+    }
+  });
+
+  cont.addEventListener('click', function(e) {
+    event.preventDefault();
+    window.location ="puzzle7.html";
+  });
+
+}
+>>>>>>> master
