@@ -1,11 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 
+/* ------- content wrapper ------- */
 main {
   max-width: 960px;
   min-width: 560px;
   margin: 36px auto;
+  font-family: 'Raleway', sans-serif;
 }
 
+section {
+  margin: 10px 0px;
+}
+
+/* ------- header ------- */
 h1 {
   font-family: 'Raleway', sans-serif;
   font-style: italic;
@@ -18,34 +25,105 @@ span#header2 {
   font-weight: 400;
 }
 
-footer {
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.9em;
-  text-transform: uppercase;
+/* ------- floating timer ------- */
+div.fixed-wrapper {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  max-width: 950px;
+  min-width: 560px;
   text-align: right;
 }
 
+div.timer-wrapper {
+  display: inline-block;
+  text-align: right;
+  background-color: rgba(0, 245, 0, 0.6);
+  color: black;
+  font-family: monospace;
+  font-size: 1.3em;
+  padding: 8px;
+}
+
+div#timer, div#timer-text {
+  display: inline-block;
+  width: auto;
+}
+
+/* ------- progress bar ------ */
+section.progress {
+  background-color: #E3E4E6;
+  min-height: 28px;
+}
+
+section.progress p {
+  margin: 0px;
+  height: 100%;
+}
+
+section.progress div {
+  height: 100%;
+  background-color: #00F500;
+  padding: 4px 12px;
+}
+
+#puzzle-1 { width: 10%; }
+#puzzle-2 { width: 20%; }
+#puzzle-3 { width: 30%; }
+#puzzle-4 { width: 40%; }
+#puzzle-5 { width: 50%; }
+#puzzle-6 { width: 60%; }
+#puzzle-7 { width: 70%; }
+#puzzle-8 { width: 80%; }
+#puzzle-9 { width: 90%; }
+#puzzle-10 { width: 100%; }
+
+/* ------- footer and hyperlink ------- */
+footer {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00F500;
+}
+
+/* ------- black screen content ------- */
 section.screen {
   background-color: black;
   font-family: monospace;
   color: #00F500;
-  padding: 24px;
-  margin: 12px 0px;
   min-height: 240px;
-  font-size: 1.75em;
+  font-size: 1.5em;
+  padding: 6px 12px 12px 12px;
 }
 
-section.screen p {
-  margin: 12px;
+section.screen article {
+  padding: 24px;
 }
 
+code {
+  font-size: 0.75em;
+  color: #FF902A;
+  line-height: 1.3;
+}
+
+/* ------- input ------- */
 section.screen button {
   border: 2px solid #00F500;
-  border-radius: 6px;
   background-color: black;
+  border-radius: 6px;
   padding: 4px 12px;
-  display: block;
-  margin: 0px auto;
+  display: inline-block;
+  margin-top: 4px;
 }
 
 section.screen button:hover {
@@ -53,13 +131,33 @@ section.screen button:hover {
   color: black;
 }
 
-/* typewriter for intro page */
+section.screen button:disabled {
+  border: 2px solid #005500;
+  color: #005500;
+}
+
+input[type="text"] {
+  margin: 6px;
+  background-color: rgba(0, 245, 0, 0.1);
+  border: 2px solid #00F500;
+  padding: 4px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid white;
+}
+
+/* ------- response ------- */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
-/* blinking cursor animation */
+span.warning {
+  color: #FF0000;
+}
+
+/* ----- blinking cursor animation ----- */
 .typed-cursor{
   opacity: 1;
   -webkit-animation: blink 0.95s infinite;
