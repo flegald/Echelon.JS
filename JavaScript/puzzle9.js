@@ -4,23 +4,34 @@ var submitButt = document.getElementById('subButt');
 var show = document.getElementById('hide');
 var cont = document.getElementById('cont')
 
-timerAll( 90, 'hide');
+var currentStage;
+getLocal();
 
-submitButt.addEventListener('click', function(e){
-event.preventDefault();
-if ((anOne.value == 12 && anTwo.value == 'undefined') || (anOne.value == 12 && anTwo.value == 'Undefined')){
-	show.className = ('visible');
-	document.getElementById('wroAns').className = ('hidden');
-  submitButt.className = "hidden";
+if (currentStage < 9) {
+  window.location.href = 'index.html';
+  console.log("Cheater");
 } else {
-	show.className = ('visible');
-	document.getElementById('corAns').className = ('hidden');
-	document.getElementById('cont').className = ('hidden');
-  submitButt.className = "hidden";
+
+  timerAll( 90, 'hide');
+
+  submitButt.addEventListener('click', function(e){
+  event.preventDefault();
+  if ((anOne.value == 12 && anTwo.value == 'undefined') || (anOne.value == 12 && anTwo.value == 'Undefined')){
+  	show.className = ('visible');
+  	document.getElementById('wroAns').className = ('hidden');
+    submitButt.className = "hidden";
+    localize(10);
+  } else {
+  	show.className = ('visible');
+  	document.getElementById('corAns').className = ('hidden');
+  	document.getElementById('cont').className = ('hidden');
+    submitButt.className = "hidden";
+  }
+
+  });
+
+  cont.addEventListener('click', function(e){
+    window.location = "puzzle10.html";
+  });
+
 }
-
-});
-
-cont.addEventListener('click', function(e){
-  window.location = "puzzle10.html";
-});
