@@ -1,10 +1,16 @@
+timerAll(90, 'res-contain');
+
+
 var submitButton = document.getElementById('submit-button');
 submitButton.addEventListener('click', function(e){
   e.preventDefault();
   if (document.getElementById('ans-false').checked) {
     document.getElementById('res-correct').className = 'visible';
+    document.getElementById('res-contain').className = 'visible';
   } else {
     document.getElementById('res-wrong').className = 'visible';
+    document.getElementById('res-contain').className = 'visible';
+
   }
   submitButton.className = 'hidden';
 });

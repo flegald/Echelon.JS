@@ -6,12 +6,14 @@
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
   <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
+  <script src="javascript/universal.js"></script>
+
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1>
+      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
     </header>
 
   <section class="progress"></section>
@@ -43,15 +45,16 @@
       <p>Line4:<input type="text" id="ans3"></p>
       <p>Line5:<input type="text" id="ans4"></p>
 
-      <button id="submit">Submit</button>
+      <button class="timeButt" id="submit">Submit</button>
           </form>
 
     </article>
 
-      <div id="wrong" class="hidden">WRONG!!!</div>
     <article class="hidden" id="response">
         <p>Explaination</p>
        <p>Eclipse is a constructor. The properties must include "this." to make it part of the constructor. </p>
+      <div id="wrong" class="hidden">WRONG!!!</div>
+
        <button id="cont">Click to Continue</button>
     </article>
   </section>

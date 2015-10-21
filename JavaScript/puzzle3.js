@@ -5,7 +5,7 @@ var subButton = document.getElementById('subButt');
 var show = document.getElementById('answer');
 var contin = document.getElementById('cont');
 
-
+timerAll(60, 'answer');
 
 subButton.addEventListener('click', function(e){
 	event.preventDefault();

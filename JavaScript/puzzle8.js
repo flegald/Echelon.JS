@@ -5,9 +5,13 @@ var wrongB = document.getElementById('wrong-b');
 var wrongC = document.getElementById('wrong-c');
 var resCorrect = document.getElementById('res-correct');
 var resWrong = document.getElementById('res-wrong');
+var resContain = document.getElementById('res-contain');
+
+timerAll( 90, 'res-contain');
 
 buttonRight.addEventListener('click', function(e){
   e.preventDefault();
+  resContain.className = 'visible';
   resCorrect.className = 'visible';
   buttonGo.className = 'visible';
   buttonRight.className = 'hidden';
@@ -23,6 +27,7 @@ buttonGo.addEventListener('click', function(e){
 
 wrongA.addEventListener('click', function(e){
   e.preventDefault();
+  resContain.className = 'visible';
   resWrong.className = 'visible';
   buttonRight.className = 'hidden';
   wrongA.className = 'hidden';
@@ -31,6 +36,7 @@ wrongA.addEventListener('click', function(e){
 });
 wrongB.addEventListener('click', function(e){
   e.preventDefault();
+  resContain.className = 'visible';
   resWrong.className = 'visible';
   buttonRight.className = 'hidden';
   wrongA.className = 'hidden';
@@ -39,6 +45,7 @@ wrongB.addEventListener('click', function(e){
 });
 wrongC.addEventListener('click', function(e){
   e.preventDefault();
+  resContain.className = 'visible';
   resWrong.className = 'visible';
   buttonRight.className = 'hidden';
   wrongA.className = 'hidden';

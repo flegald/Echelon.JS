@@ -1,14 +1,18 @@
 var trueButton = document.getElementById('ans-true');
 var falseButton = document.getElementById('ans-false');
 
+timerAll( 90, 'res-contain');
+
 trueButton.addEventListener('click', function(e){
   e.preventDefault();
+  document.getElementById('res-contain').className = 'visible';
   trueButton.className = 'hidden';
   falseButton.className = 'hidden';
   document.getElementById('res-correct').className = 'visible';
 });
 falseButton.addEventListener('click', function(e){
   e.preventDefault();
+  document.getElementById('res-contain').className = 'visible';
   trueButton.className = 'hidden';
   falseButton.className = 'hidden';
   document.getElementById('res-wrong').className = 'visible';
