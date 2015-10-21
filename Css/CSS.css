@@ -58,45 +58,59 @@ a {
 
 }
 
+/* ------- black screen content ------- */
 section.screen {
   background-color: black;
   font-family: monospace;
   color: #00F500;
-  margin: 12px 0px;
+  margin: 6px 0px;
   min-height: 240px;
-  font-size: 1.75em;
+  font-size: 1.6em;
+  padding: 6px 12px;
 }
 
 section.screen p {
-  margin: 12px;
-}
-
-code, code p {
-  font-size: 0.6em;
-  color: #BBB;
+  
 }
 
 section.screen article {
   padding: 24px;
 }
 
-form {
+code, code p {
+  font-size: 0.75em;
+  color: #DDD;
+  line-height: 1;
 }
 
+/* ------- input ------- */
 section.screen button {
-  margin-left: 10px;
-  margin-right: -5px;
   border: 2px solid #00F500;
-  border-radius: 6px;
   background-color: black;
+  border-radius: 6px;
   padding: 4px 12px;
   display: inline-block;
-
 }
 
 section.screen button:hover {
+  border: 2px solid #005500;
+  color: #005500;
+}
+
+/*section.screen button:hover {
   background-color: #00F500;
   color: black;
+}
+*/
+input[type="text"] {
+  margin: 6px;
+  background-color: rgba(0, 245, 0, 0.1);
+  border: 2px solid #00F500;
+  padding: 4px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid white;
 }
 
 /* typewriter for intro page */
