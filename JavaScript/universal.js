@@ -1,6 +1,4 @@
 
-
-
 function disableButt (id) {
     var subButton = document.getElementsByClassName('timeButt');
     subButton.disabled = false;
@@ -12,25 +10,36 @@ function disableButt (id) {
     }
 }
 
-
-
 function timerAll(secsRemain, id){
-var check = document.getElementById(id);
-var interval = setInterval(function() {
-    document.getElementById('timer').innerHTML = --secsRemain;
+    var check = document.getElementById(id);
+    var interval = setInterval(function() {
+        document.getElementById('timer').innerHTML = --secsRemain;
 
-    if (secsRemain <= 0)
-    {
-        document.getElementById('timer').innerHTML = 'Time is up';
-        clearInterval(interval);
-        disableButt(id);
-    } else if ((secsRemain > 0) && (check.className !== 'hidden')){
-        document.getElementById('timer').innerHTML = secsRemain;   
-    }
-}, 1000);
+        if (secsRemain <= 0)
+        {
+            document.getElementById('timer').innerHTML = 'Time is up';
+            clearInterval(interval);
+            disableButt(id);
+        } else if ((secsRemain > 0) && (check.className !== 'hidden')){
+            document.getElementById('timer').innerHTML = secsRemain;
+        }
+    }, 1000);
+}
+
+var currentStage = 0;
+
+function localize(stageNum) {
+    currentStage = stageNum;
+    var tempWins = JSON.stringify(currentStage);
+    localStorage.setItem("WillFerrell", tempWins);
+}
+function getLocal() {
+    var tempWins = localStorage.getItem("WillFerrell");
+    currentStage = JSON.parse(tempWins);
 }
 
 
 
 
-	
+
+
