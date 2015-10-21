@@ -16,6 +16,7 @@ if (currentStage < 2) {
   var ansd = document.getElementById('ansd');
   var response = document.getElementById('response');
   var cont = document.getElementById('cont');
+
   ansa.addEventListener('click', function(e) {
     event.preventDefault();
     localize(3);
@@ -24,6 +25,7 @@ if (currentStage < 2) {
     ansb.className="hidden";
     ansc.className="hidden";
     ansd.className="hidden";
+    document.getElementById('return-button').className = 'hidden';
 
   });
 
@@ -58,12 +60,12 @@ if (currentStage < 2) {
 
   });
 
+  document.getElementById('return-button').addEventListener('click', function(e){
+    window.location = 'Fail.html';
+  });
+
   cont.addEventListener('click', function(e) {
     window.location= "puzzle3.html";
   });
 
 }
-
-
-
-

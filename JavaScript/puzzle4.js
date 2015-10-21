@@ -1,4 +1,3 @@
-
 var currentStage;
 getLocal();
 
@@ -10,6 +9,7 @@ if (currentStage < 4) {
 
   timerAll(90, 'res-contain');
 
+
   var submitButton = document.getElementById('submit-button');
   submitButton.addEventListener('click', function(e){
     e.preventDefault();
@@ -17,10 +17,10 @@ if (currentStage < 4) {
       localize(5);
       document.getElementById('res-correct').className = 'visible';
       document.getElementById('res-contain').className = 'visible';
+      document.getElementById('return-button').className = 'hidden';
     } else {
       document.getElementById('res-wrong').className = 'visible';
       document.getElementById('res-contain').className = 'visible';
-
     }
     submitButton.className = 'hidden';
   });
@@ -30,4 +30,9 @@ if (currentStage < 4) {
     window.location.href = 'puzzle5.html';
   });
 
+  document.getElementById('return-button').addEventListener('click', function(e){
+  event.preventDefault();
+  window.location.href = 'Fail.html';
+  })
 }
+

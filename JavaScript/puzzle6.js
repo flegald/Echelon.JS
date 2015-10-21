@@ -41,4 +41,10 @@ if (currentStage < 6) {
     window.location ="puzzle7.html";
   });
 
+  document.getElementById('return-button').addEventListener('click', function(e){
+    event.preventDefault();
+    window.location = "Fail.html";
+  });
+
 }
+
