@@ -13,13 +13,19 @@
     <header>
       <h1>Echelon<span id="header2">.JS</span></h1>
     </header>
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer">5</div>
+      </div>
+    </div>
 
   <section class="progress"></section>
-
+  
   <section class="screen">
     <article class="question">
-     <code>
-      <p> var Agent = function(alias, country, killCount, completed){<br/>
+      <code>
+        var Agent = function(alias, country, killCount, completed){<br/>
           &nbsp;&nbsp;this.alias = alias;<br />
           &nbsp;&nbsp;this.country = country;<br />
           &nbsp;&nbsp;this.killCount = killCount;<br />
@@ -35,11 +41,11 @@
           Agent.prototype.tracker = function(){<br />
           &nbsp;&nbsp;if(this.alias === agent0||agent1){<br />
           &nbsp;&nbsp;&nbsp;contact(this.alias);<br />
-          };<br /></p>
+          };
       </code>
 
+      <p>Agent.prototype.Tracker is a:</p>
     <form>
-      <p>Agent.protype.Tracker is a:</p>
   <!--     <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p> -->
       <button id="ansa">Method </button>
       <button id="ansb">Function</button>

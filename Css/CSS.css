@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 
+/* content wrapper */
 main {
   max-width: 960px;
   min-width: 560px;
   margin: 36px auto;
 }
 
+/* ------- header ------- */
 h1 {
   font-family: 'Raleway', sans-serif;
   font-style: italic;
@@ -18,6 +20,33 @@ span#header2 {
   font-weight: 400;
 }
 
+div.fixed-wrapper {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  max-width: 950px;
+  min-width: 560px;
+  text-align: right;
+}
+
+div.timer-wrapper {
+  display: inline-block;
+  text-align: right;
+  background-color: rgba(0, 245, 0, 0.8);
+  color: black;
+  font-family: monospace;
+  font-size: 1.3em;
+  padding: 8px;
+}
+
+
+div#timer, div#timer-text {
+  display: inline-block;
+  width: auto;
+}
+
+
+/* ------- footer and hyperlink ------- */
 footer {
   font-family: 'Raleway', sans-serif;
   font-size: 0.9em;
@@ -25,11 +54,14 @@ footer {
   text-align: right;
 }
 
+a {
+
+}
+
 section.screen {
   background-color: black;
   font-family: monospace;
   color: #00F500;
-  padding: 24px;
   margin: 12px 0px;
   min-height: 240px;
   font-size: 1.75em;
@@ -39,13 +71,27 @@ section.screen p {
   margin: 12px;
 }
 
+code, code p {
+  font-size: 0.6em;
+  color: #BBB;
+}
+
+section.screen article {
+  padding: 24px;
+}
+
+form {
+}
+
 section.screen button {
+  margin-left: 10px;
+  margin-right: -5px;
   border: 2px solid #00F500;
   border-radius: 6px;
   background-color: black;
   padding: 4px 12px;
-  display: block;
-  margin: 0px auto;
+  display: inline-block;
+
 }
 
 section.screen button:hover {

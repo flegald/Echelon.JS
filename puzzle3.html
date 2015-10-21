@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -7,22 +8,25 @@
 <body>
 <main>
 	<h1>Echelon<span id="header2">.JS</span></h1>
+	
 	<section class="screen">
-	<p> var droid_Ai = ['emotion', 'logic', 'morals'];</br>
-		var disk_Nexus = ['memory', 'cpu', 'sensory'];</br></br>
-		var droid = [droid_Ai, disk_Nexus];
+		<article class="question">
+			<code>
+				var droid_Ai = ['emotion', 'logic', 'morals'];</br>
+				var disk_Nexus = ['memory', 'cpu', 'sensory'];</br></br>
+				var droid = [droid_Ai, disk_Nexus];
+			</code>
+			<p>Android Subject#: CF-201</br>
+				Physical Build: Complete</br>
+				AI sequence: Incomplete</br>
+				Nexus Status: Incomplete</br>
+				Status: Inoperable</br>
+				Stages to be Completed:</br>
+				&nbsp;1: droid[0][2]</br>
+				&nbsp;2: droid[1][1]</br>
+				&nbsp;3: droid[0][0]</br></br>
 
-	<p>Android Subject#: CF-201</br>
-		Physical Build: Complete</br>
-		AI sequence: Incomplete</br>
-		Nexus Status: Incomplete</br>
-		Status: Inoperable</br>
-		Stages to be Completed:</br>
-		&nbsp;1: droid[0][2]</br>
-		&nbsp;2: droid[1][1]</br>
-		&nbsp;3: droid[0][0]</br></br>
-
-		Enter in the values of the stages to be completed.
+			Enter in the values of the stages to be completed.
 
 
 		<form>
@@ -30,7 +34,8 @@
 			2:<input type="text" id="aTwo"></input></br></br>
 			3:<input type="text" id="aThree"></input></br></br>
 			<button id="subButt">Submit</button>
-		</from>
+		</form>
+		</article>
 		<article id="answer" class="hidden">
 			<p id="corAns">Access Granted</p>
 			<p id="wroAns">Access Denied</p>
