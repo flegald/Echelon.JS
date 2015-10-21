@@ -16,8 +16,9 @@ buttonRight.addEventListener('click', function(e){
   wrongC.className = 'hidden';
 });
 
-buttonGo.addEventListener('click', function(){
-  window.location.href="index.html";
+buttonGo.addEventListener('click', function(e){
+  e.preventDefault();
+  window.location.href="puzzle9.html";
 });
 
 wrongA.addEventListener('click', function(e){
