@@ -10,7 +10,7 @@ var contin = document.getElementById('cont');
 subButton.addEventListener('click', function(e){
 	event.preventDefault();
 	if ((anOne.value == "'morals'" && anTwo.value == "'cpu'" && anThree.value == "'emotion'") || (anOne.value == 'morals' && anTwo.value == 'cpu' && anThree.value == 'emotion') || (anOne.value == '"morals"' && anTwo.value == '"cpu"' && anThree.value == '"emotion"') 
-		){
+	){
 		show.className = ('visible');
 		document.getElementById('wroAns').className = ('hidden');
 		subButton.className = ('hidden');
