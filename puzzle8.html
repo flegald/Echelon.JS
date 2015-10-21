@@ -5,12 +5,14 @@
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
   <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
+  <script src="javascript/universal.js"></script>
+
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1>
+      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
     </header>
 
     <section class="screen" style="min-height:550px">
@@ -30,28 +32,33 @@
 <!--       <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p> -->
 
       <form>
-        <button style="display:inline" id="correct-button"/>
+        <button class="timeButt" style="display:inline" id="correct-button"/>
           James<br />Bond<br />James<br />James
         </button>
-        <button style="display:inline" id="wrong-a"/>
+        <button class="timeButt" style="display:inline" id="wrong-a"/>
           James<br />James<br />Bond<br />James
         </button>
-        <button style="display:inline" id="wrong-b"/>
+        <button class="timeButt" style="display:inline" id="wrong-b"/>
           Bond<br />James<br />James<br />Bond
         </button>
-        <button style="display:inline" id="wrong-c"/>
+        <button class="timeButt" style="display:inline" id="wrong-c"/>
           Bond<br />James<br />James<br />James
         </button>
       </form>
-      <article id="res-correct" class="hidden">
-        <p>ACCESS GRANTED</p>
-        <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
-      </article>
-      <article id="res-wrong" class="hidden">
-        <p>ACCESS DENIED</p>
-        <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
-      </article>
-      <button id="cont" class="hidden">Continue</button>
+
+      <div id="res-contain" class="hidden">
+        <article id="res-correct" class="hidden">
+          <p>ACCESS GRANTED</p>
+          <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
+        </article>
+
+        <article id="res-wrong" class="hidden">
+          <p>ACCESS DENIED</p>
+          <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
+        </article>
+        <button id="cont" class="hidden">Continue</button>
+      </div>
+
     </section>
 
     <footer>

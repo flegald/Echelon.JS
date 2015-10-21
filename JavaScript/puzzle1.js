@@ -3,6 +3,7 @@ var corAns = document.getElementById('corButt');
 var show = document.getElementById('end');
 var cont =  document.getElementById('cont')
 
+timerAll(90,'end');
 
 corAns.addEventListener('click', function(e){
 	event.preventDefault();

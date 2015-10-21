@@ -6,6 +6,8 @@ var submit = document.getElementById('submit');
 var cont = document.getElementById('cont');
 var wrong = document.getElementById('wrong');
 
+timerAll( 90, 'response');
+
 submit.addEventListener('click', function(e){
   event.preventDefault();
   var str1 = ans1.value.replace(/\s/g, '');
@@ -19,7 +21,9 @@ submit.addEventListener('click', function(e){
   response.className="visible";
   submit.className="hidden";
 } else {
+  response.className="visible";
   wrong.className="visible";
+  cont.className = "hidden";
 };
 });
 

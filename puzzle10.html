@@ -5,12 +5,14 @@
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
   <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
+  <script src="javascript/universal.js"></script>
+
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1>
+      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
     </header>
 
     <section class="progress">
@@ -26,20 +28,22 @@
         <p>What is alfa - bravo?</p>
         <form>
           <input type="text" id="text-input">
-          <button id="submit-button">Submit</button>
+          <button class="timeButt" id="submit-button">Submit</button>
         </form>
       </article>
 
-      <article id="res-correct" class="hidden">
-        <p>ACCESS GRANTED</p>
-        <p>JavaScript uses weak typing and type coercion. If only plus operators (+) are present, numbers and strings are concatenated into a string. With the presence of a minus operator (-), strings are coerced to numbers.</p>
-        <button id="cont-button">Continue</button>
-      </article>
+      <div id="res-contain" class="hidden">
+        <article id="res-correct" class="hidden">
+          <p>ACCESS GRANTED</p>
+          <p>JavaScript uses weak typing and type coercion. If only plus operators (+) are present, numbers and strings are concatenated into a string. With the presence of a minus operator (-), strings are coerced to numbers.</p>
+          <button id="cont-button">Continue</button>
+        </article>
 
-      <article id="res-wrong" class="hidden">
-        <p>ACCESS DENIED</p>
-        <p>JavaScript uses weak typing and type coercion. If only plus operators (+) are present, numbers and strings are concatenated into a string. With the presence of a minus operator (-), strings are coerced to numbers.</p>
-      </article>
+        <article id="res-wrong" class="hidden">
+          <p>ACCESS DENIED</p>
+          <p>JavaScript uses weak typing and type coercion. If only plus operators (+) are present, numbers and strings are concatenated into a string. With the presence of a minus operator (-), strings are coerced to numbers.</p>
+        </article>
+      </div>
 
     </section>
 

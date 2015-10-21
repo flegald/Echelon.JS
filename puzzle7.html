@@ -5,12 +5,14 @@
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
   <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
+  <script src="javascript/universal.js"></script>
+
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1>
+      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
     </header>
 
     <section class="progress">
@@ -21,22 +23,24 @@
       <article id="question">
         <p>Given z is true and x || (!y && z) is false, <br />what must be the boolean value of y?</p>
         <form>
-          <button id="ans-true">true</button>
-          <button id="ans-false">false</button>
+          <button class="timeButt" id="ans-true">true</button>
+          <button class="timeButt" id="ans-false">false</button>
         </form>
       </article>
 
-      <article id="res-correct" class="hidden">
-        <p>ACCESS GRANTED</p>
-        <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clause is false. Since z is true, !y must be false, and so y is true.</p>
-        <button id="cont">Continue</button>
-      </article>
+      <div id="res-contain" class="hidden">
+        <article id="res-correct" class="hidden">
+          <p>ACCESS GRANTED</p>
+          <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clause is false. Since z is true, !y must be false, and so y is true.</p>
+          <button id="cont">Continue</button>
+        </article>
 
-      <article id="res-wrong" class="hidden">
-        <p>ACCESS DENIED</p>
-        <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clause is false. Since z is true, !y must be false, and so y is true.</p>
-      </article>
-
+        <article id="res-wrong" class="hidden">
+          <p>ACCESS DENIED</p>
+          <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clause is false. Since z is true, !y must be false, and so y is true.</p>
+        </article>
+      </div>
+      
     </section>
 
     <footer>
