@@ -8,10 +8,14 @@ var wrong = document.getElementById('wrong');
 
 submit.addEventListener('click', function(e){
   event.preventDefault();
-  if(ans1.value === 'this.terra=terra;' &&
-     ans2.value === 'this.beam=beam;' &&
-     ans3.value === 'this.xtype=xtype;' &&
-     ans4.value === 'this.dream=function(){') {
+  var str1 = ans1.value.replace(/\s/g, '');
+  var str2 = ans2.value.replace(/\s/g, '');
+  var str3 = ans3.value.replace(/\s/g, '');
+  var str4 = ans4.value.replace(/\s/g, '');
+  if(str1 === 'this.terra=terra;' &&
+     str2 === 'this.beam=beam;' &&
+     str3 === 'this.xtype=xtype;' &&
+     str4 === 'this.dream=function(){') {
   response.className="visible";
   submit.className="hidden";
 } else {
