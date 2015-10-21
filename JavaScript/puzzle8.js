@@ -29,13 +29,6 @@ if (currentStage < 8) {
     wrongC.className = 'hidden';
   });
 
-<<<<<<< HEAD
-document.getElementById('return-button').addEventListener('click', function(e){
-  event.preventDefault();
-  window.location.href = 'Fail.html';
-})
-
-=======
   buttonGo.addEventListener('click', function(e){
     e.preventDefault();
     window.location.href="puzzle9.html";
@@ -69,5 +62,9 @@ document.getElementById('return-button').addEventListener('click', function(e){
     wrongC.className = 'hidden';
   });
 
+  document.getElementById('return-button').addEventListener('click', function(e){
+    event.preventDefault();
+    window.location.href = 'Fail.html';
+  });
 }
->>>>>>> master
+

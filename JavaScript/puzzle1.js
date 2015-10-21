@@ -15,11 +15,11 @@ corAns.addEventListener('click', function(e){
   document.getElementById('wrong').className = ('hidden');
   wroAns.className = ('hidden');
   corAns.className = ('hidden');
-<<<<<<< HEAD
+
   document.getElementById('return-button').className = "hidden";
-=======
+
   localize(2);
->>>>>>> master
+
 });
 
 

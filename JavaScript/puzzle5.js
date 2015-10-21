@@ -29,12 +29,12 @@ if (currentStage < 5) {
     localize(6);
   });
 
-<<<<<<< HEAD
-document.getElementById('return-button').addEventListener('click', function(e){
-  event.preventDefault();
-  window.location.href = 'Fail.html';
-})
-=======
+
+  document.getElementById('return-button').addEventListener('click', function(e){
+    event.preventDefault();
+    window.location.href = 'Fail.html';
+  });
+
   buttonGo.addEventListener('click', function(){
     window.location.href="puzzle6.html";
   });
@@ -68,4 +68,4 @@ document.getElementById('return-button').addEventListener('click', function(e){
   });
 
 }
->>>>>>> master
+

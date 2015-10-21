@@ -14,17 +14,6 @@ if (currentStage < 6) {
   console.log("Cheater");
 } else {
 
-<<<<<<< HEAD
-cont.addEventListener('click', function(e) {
-  event.preventDefault();
-  window.location ="puzzle7.html";
-});
-
-document.getElementById('return-button').addEventListener('click', function(e){
-  event.preventDefault();
-  window.location = "Fail.html";
-})
-=======
   timerAll( 90, 'response');
 
   submit.addEventListener('click', function(e){
@@ -52,5 +41,10 @@ document.getElementById('return-button').addEventListener('click', function(e){
     window.location ="puzzle7.html";
   });
 
+  document.getElementById('return-button').addEventListener('click', function(e){
+    event.preventDefault();
+    window.location = "Fail.html";
+  });
+
 }
->>>>>>> master
+
