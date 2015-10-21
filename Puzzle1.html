@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -7,12 +8,25 @@
 
 <body>
 <main>
-	<h1>ECHELON<span id="header2">.JS</span></h1>
-	<section class="progress"></section>
+	<header>
+		<h1>ECHELON<span id="header2">.JS</span></h1>
+	</header>
+
+  <div class="fixed-wrapper">
+    <div class="timer-wrapper">
+      <div id="timer-text">Seconds remaining:</div>
+      <div id="timer">5</div>
+    </div>
+  </div>
+
+  <section class="progress">
+    <div id="puzzle-1">Door 1/10</div>
+  </section>
 
 	<section class="screen">
 
-	<article class="question>"><code>var nebulae_Position = function (x, y, z) {
+	<article class="question">
+		<code>var nebulae_Position = function (x, y, z) {
 	</br>
 
 	var locate = x * z;</br>
@@ -22,12 +36,12 @@
 	}
 	</br>
 
-	nebulae_Position(2.7, 3.2, 4.5);</code></br></br>
+	nebulae_Position(2.7, 3.2, 4.5);</code></br>
 	<p>The Nebulae Position function will return 13.95<p>
 
 
 	<form>
-	<button id="wroButt" value>TRUE</button></br>
+	<button id="wroButt" value>TRUE</button>
 	<button id = "corButt">FALSE</button></br>
 	</form>
 	</article>

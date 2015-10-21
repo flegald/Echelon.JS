@@ -14,7 +14,8 @@
     </header>
 
     <section class="screen" style="min-height:550px">
-      <p>
+      <article class="question">
+      <code>
       var cinGex = ['C-N36','P-9','TOG-77','SE-4']; <br />
   var alGex = document.createElement('ul'); <br /> <br />
 
@@ -25,8 +26,8 @@
   } <br />
   function gexSel() { <br />
      &nbsp;&nbsp;return alGex.lastChild.previousSibling.textContent; <br />
-  } <br /><br />
-  </p>
+  } <br />
+  </code>
 
       <p>When calling the function gexSel(), which will be returned?</p>
 
@@ -37,6 +38,7 @@
         <button style="display:inline" id="wrong-b"/>SE-4</button>
         <button style="display:inline" id="wrong-c"/>TOG-77</button>
       </form>
+      </article>
       <article id="res-correct" class="hidden">
         <p>ACCESS GRANTED</p>
         <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>

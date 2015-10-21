@@ -13,8 +13,15 @@
       <h1>Echelon<span id="header2">.JS</span></h1>
     </header>
 
-    <section class="progress">
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer">5</div>
+      </div>
+    </div>
 
+    <section class="progress">
+      <div id="puzzle-4">Door 4/10</div>
     </section>
 
     <section class="screen">
@@ -22,9 +29,8 @@
         <p>True or False:</p>
         <p>typeof(new Boolean(false)) will return "boolean".</p>
         <form>
-          <input type="radio" id="ans-true" name="answer" value="True">True
-          <input type="radio" id="ans-false" name="answer" value="False">False
-          <button id="submit-button">Submit</button>
+          <button id="ans-true">True</button>
+          <button id="ans-false">False</button>
         </form>
       </article>
 
