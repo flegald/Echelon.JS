@@ -5,12 +5,14 @@
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
   <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
+  <script src="javaScript/universal.js"></script>
+
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1>
+      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
     </header>
 
     <section class="screen" style="min-height:550px">
@@ -32,20 +34,23 @@
 
 <!--       <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p> -->
       <form>
-        <button style="display:inline" id="correct-button"/>P-9</button>
-        <button style="display:inline" id="wrong-a"/>C-N36</button>
-        <button style="display:inline" id="wrong-b"/>SE-4</button>
-        <button style="display:inline" id="wrong-c"/>TOG-77</button>
+        <button class="timeButt" style="display:inline" id="correct-button"/>P-9</button>
+        <button class="timeButt" style="display:inline" id="wrong-a"/>C-N36</button>
+        <button class="timeButt" style="display:inline" id="wrong-b"/>SE-4</button>
+        <button class="timeButt" style="display:inline" id="wrong-c"/>TOG-77</button>
       </form>
-      <article id="res-correct" class="hidden">
-        <p>ACCESS GRANTED</p>
-        <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
-      </article>
-      <article id="res-wrong" class="hidden">
-        <p>ACCESS DENIED</p>
-        <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
-      </article>
-      <button id="cont" class="hidden">Continue</button>
+      <div id="res-contain" class="hidden">
+        <article id="res-correct" class="hidden">
+          <p>ACCESS GRANTED</p>
+          <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
+        </article>
+        <article id="res-wrong" class="hidden">
+          <p>ACCESS DENIED</p>
+          <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
+        </article>
+        <button id="cont" class="hidden">Continue</button>
+      </div>
+
     </section>
 
     <footer>

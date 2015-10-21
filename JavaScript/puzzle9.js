@@ -4,6 +4,7 @@ var submitButt = document.getElementById('subButt');
 var show = document.getElementById('hide');
 var cont = document.getElementById('cont')
 
+timerAll( 90, 'hide');
 
 submitButt.addEventListener('click', function(e){
 event.preventDefault();
