@@ -9,7 +9,7 @@ submitButton.addEventListener('click', function(e){
   submitButton.className = 'hidden';
 });
 
-var contButton = document.getElementById('cont-button');
+var contButton = document.getElementById('cont');
 contButton.addEventListener('click', function(){
   window.location.href = 'puzzle5.html';
 });

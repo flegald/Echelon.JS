@@ -14,7 +14,7 @@ falseButton.addEventListener('click', function(e){
   document.getElementById('res-wrong').className = 'visible';
 });
 
-var contButton = document.getElementById('cont-button');
+var contButton = document.getElementById('cont');
 contButton.addEventListener('click', function(){
   window.location.href = 'puzzle8.html';
 });

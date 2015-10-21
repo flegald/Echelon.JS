@@ -3,7 +3,7 @@ var ans2 = document.getElementById('ans2');
 var ans3 = document.getElementById('ans3');
 var ans4 = document.getElementById('ans4');
 var submit = document.getElementById('submit');
-var cont = document.getElementById('continue');
+var cont = document.getElementById('cont');
 var wrong = document.getElementById('wrong');
 
 submit.addEventListener('click', function(e){
@@ -25,5 +25,5 @@ submit.addEventListener('click', function(e){
 
 cont.addEventListener('click', function(e) {
   event.preventDefault();
-  window.location ="http://google.com";
+  window.location ="puzzle7.html";
 });

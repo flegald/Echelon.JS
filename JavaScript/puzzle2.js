@@ -76,7 +76,7 @@ var ansb = document.getElementById('ansb');
 var ansc = document.getElementById('ansc');
 var ansd = document.getElementById('ansd');
 var response = document.getElementById('response');
-var cont = document.getElementById('continue');
+var cont = document.getElementById('cont');
 ansa.addEventListener('click', function(e) {
   event.preventDefault();
   response.className="visible"
@@ -118,6 +118,6 @@ ansd.addEventListener('click', function(e){
 
 });
 
-response.addEventListener('click', function(e) {
-  window.location= "http://www.google.com";
+cont.addEventListener('click', function(e) {
+  window.location= "puzzle3.html";
 });

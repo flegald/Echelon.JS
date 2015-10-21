@@ -1,5 +1,5 @@
 var buttonRight = document.getElementById('correct-button');
-var buttonGo = document.getElementById('go-button');
+var buttonGo = document.getElementById('cont');
 var wrongA = document.getElementById('wrong-a');
 var wrongB = document.getElementById('wrong-b');
 var wrongC = document.getElementById('wrong-c');
