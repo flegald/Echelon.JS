@@ -56,11 +56,6 @@ section.progress {
   min-height: 28px;
 }
 
-section.progress p {
-  margin: 0px;
-  height: 100%;
-}
-
 section.progress div {
   height: 100%;
   background-color: #00F500;
@@ -76,7 +71,7 @@ section.progress div {
 #puzzle-7 { width: 70%; }
 #puzzle-8 { width: 80%; }
 #puzzle-9 { width: 90%; }
-#puzzle-10 { width: 100%; }
+#puzzle-10 { width: 97.5%; }
 
 /* ------- footer and hyperlink ------- */
 footer {
