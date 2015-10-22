@@ -4,9 +4,9 @@ var showCor = document.getElementById('res-correct');
 var showWro = document.getElementById('res-wrong');
 var cont =  document.getElementById('cont')
 
-var currentStage = 1;
-localize(1);
-console.log(currentStage);
+var currentStage;
+getLocal();
+
 
 // timerAll(90,'end');
 

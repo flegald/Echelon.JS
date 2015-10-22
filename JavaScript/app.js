@@ -12,7 +12,7 @@ var typeWriter = function(id) {
   var timeOut;
 
   // this function types one letter per call, then calls the subsequent typeLetter()
-  var typeLetter = function() { 
+  var typeLetter = function() {
     timeOut = setTimeout(function() {
       loc.className = 'visible';
       letter += 1;
@@ -41,8 +41,8 @@ setTimeout(function() {
   typeWriter('line1');
 }, typeWait);
 
-var delayTime1 = typeWait 
-  + document.getElementById('line1').innerHTML.length * typeSpeed 
+var delayTime1 = typeWait
+  + document.getElementById('line1').innerHTML.length * typeSpeed
   + 50 + typeGap;
 
 setTimeout(function() {
@@ -77,4 +77,23 @@ $('#accept-button').on('click', function(){
 // Button specific to the Fail.html page redirecting to the index
 $('#return-button').on('click', function(){
   window.location.href = 'index.html';
+});
+
+//Reset local storage
+var currentStage;
+localize(1);
+
+//Add user name to localStorage
+var userButton = document.getElementById('user-button');
+var agentName = document.getElementById('agent-name');
+var agentAlias = document.getElementById('agent-alias');
+
+userButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  tempAgentName = JSON.stringify(agentName.value);
+  tempAgentAlias = JSON.stringify(agentAlias.value);
+  localStorage.setItem('AgentName', tempAgentName);
+  localStorage.setItem('AgentAlias', tempAgentAlias);
+  agentName.value = '';
+  agentAlias.value = '';
 });
