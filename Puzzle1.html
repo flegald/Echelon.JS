@@ -1,52 +1,80 @@
+
+<!DOCTYPE html>
+
 <html>
 <head>
-	<title></title>
-	<link type="text/css" rel="stylesheet" href="Css/normalize.css">
-	<link type="text/css" rel="stylesheet" href="Css/CSS.css">
 
-<script src="JavaScript/universal.js"></script>
+  <title>Echelon.JS</title>
+  <link rel="stylesheet" type="text/css" href="Css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="Css/CSS.css">
+  <script src="JavaScript/universal.js"></script>
 </head>
 
 <body>
-<main>
-	<h1>ECHELON<span id="header2">.JS</span></h1><h2 id="timer"><h2>
-	<section class="progress"></section>
+  <main>
+
+    <header>
+      <h1>Echelon<span id="header2">.JS</span></h1>
+    </header>
+
+
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer"></div>
+      </div>
+    </div>
+
+
+    <section class="progress">
+      <div id="puzzle-1">Door 1/10</div>
+    </section>
+
 
 	<section class="screen">
 
-	<article class="question>"><code>var nebulae_Position = function (x, y, z) {
-	</br>
+		<article class="question>"><code>var nebulae_Position = function (x, y, z) {
+			</br>
 
-	var locate = x * z;</br>
-	var rad = y + z;</br>
-	var tri = Math.floor((locate - y) + (rad - x));</br>
-	return tri;</br>
-	}
-	</br>
+			var locate = x * z;</br>
+			var rad = y + z;</br>
+			var tri = Math.floor((locate - y) + (rad - x));</br>
+			return tri;</br>
+			}
+			</br>
 
-	nebulae_Position(2.7, 3.2, 4.5);</code></br></br>
-	<p>The Nebulae Position function will return 13.95<p>
+			nebulae_Position(2.7, 3.2, 4.5);</code></br></br>
+			<p>The Nebulae Position function will return 13.95<p>
 
 
-	<form>
-	<button class="timeButt" id="wroButt" value>TRUE</button></br>
-	<button class="timeButt" id="corButt">FALSE</button></br>
-	</form>
-	</article>
-	<article>
-	<div id="end" class = "hidden">
-		<div id="correct"><p>Correct</p></div>
-		<div id="wrong"><p>Wrong</p></div>
-		</br>
-		<p id = "explain">The term "Math.floor" eliminates the decimal of a value and rounds it to the lowest whole number.</p>
+			<form>
+				<button class="timeButt" id="ans-True" value>TRUE</button></br>
+				<button class="timeButt" id="ans-False">FALSE</button></br>
+			</form>
+		</article>
+		<article>
+	
+	<article id="res-correct" class = "hidden">
+		<p>ACCESS GRANTED</p>
+		<p>The function "Math.floor" eliminates the decimal of a value and rounds it to the lowest whole number.</p>
 		<button id = "cont">CONTINUE</button>
+	</article>
+
+	<article id="res-wrong" class="hidden">
+		<p><span class="warning">ACCESS DENIED</span></p>
+		<p>The function "Math.floor" eliminates the decimal of a value and rounds it to the lowest whole number.</p>
 		<button id="return-button">Return</button>
-	</div>
-</article>
+	</article>
+
 </section>
+		
+<footer>
+  <a href="index.html">Home</a> &bull;
+  <a href="about-us.html">About Us</a>
+</footer>
 
-
-<script src="JavaScript/puzzle1.js"></script>
-</main>
+  </main>
+  <script type="text/javascript" src="JavaScript/Puzzle1.js"></script>
 </body>
 </html>
+

@@ -1,25 +1,38 @@
 <html>
 <head>
-	<title>
-	</title>
-	<link type="text/css" rel="stylesheet" href="Css/normalize.css">
-	<link type="text/css" rel="stylesheet" href="Css/CSS.css">
-	<script src="JavaScript/universal.js"></script>
 
+  <title>Echelon.JS</title>
+  <link rel="stylesheet" type="text/css" href="Css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="Css/CSS.css">
+  <script src="JavaScript/universal.js"></script>
 </head>
 
 <body>
-	
-	<main>
-		
-		<h1>ECHELON<span id="header2">.JS<span></h1><h2 id="timer"></h2>
-		
+  <main>
+
+    <header>
+      <h1>Echelon<span id="header2">.JS</span></h1>
+    </header>
+
+
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer"></div>
+      </div>
+    </div>
+
+    <section class="progress">
+      <div id="puzzle-9">Door 9/10</div>
+    </section>
+
 		<section class="screen">
-			<article class="question">
-				<p><code>function hack(){</br>
+			
+			<article id="question">
+				<code>function hack() {</br>
 				&nbsp;var aOne = (3 * 3);</br>
 				&nbsp;var x = (aOne + 3);</br>
-				&nbsp;var aTwo = x + aOne;</br>
+				&nbsp;var aTwo = (x + aOne);</br>
 				&nbsp;console.log(x);</br>
 				}</br></br>
 				hack();</br>
@@ -29,22 +42,35 @@
 				</p>What will the two console.logs read in the console?</p>
 				</br>
 				</br>
-				1:&nbsp;<input type="text" id="aOne"></input></br></br>
-				2:&nbsp;<input type="text" id="aTwo"></input>
-				</br></br>
-				<button  class="timeButt" id="subButt">Submit</button>
-			</article>
+				<form>
+					1:<input type="text" id="aOne"></input></br>
+          2:<input type="text" id="aTwo"></input></br>
+         	</br>
+          <button id="subButt">Submit</button>
+					</form>
+
+				</article>
 	
-	<div id='hide' class="hidden">
-		<p id="corAns">Access Granted</p>
-		<p id="wroAns">Access Denied</p>
-		<button id="cont">Continue</button>
-		<button id="return-button">Return</button>
-	</div>
+				<article id='res-correct' class="hidden">
+					<p>ACCESS GRANTED</p>
+					<p>The value of <code>x</code> is declared twice as a variable. Once inside of a function making it a local variable, and the second time it is declared is globally. However, the <code>console.log(x);</code> in the global spaced is called before <code>x</code> has been declared rendering this log <code>undefined</code>.</p>
+					<button id="cont">Continue</button>
+				</article>
 
-</section>
-</main>
-<script src="JavaScript/puzzle9.js"></script>
+				<article id="res-wrong" class="hidden">
+					<p><span class="warning">ACCESS DENIED</span></p>
+					<p>The value of <code>x</code> is declared twice as a variable. Once inside of a function making it a local variable, and the second time it is declared is globally. However, the <code>console.log(x);</code> in the global spaced is called before <code>x</code> has been declared rendering this log <code>undefined</code>.</p>
+					<button id="return-button">Return</button>
+				</article>
+
+		</section>
+
+	<footer>
+	  <a href="index.html">Home</a> &bull;
+	  <a href="about-us.html">About Us</a>
+	</footer>
+
+	</main>
+	 <script type="text/javascript" src="JavaScript/puzzle9.js"></script>
 </body>
-
 </html>
