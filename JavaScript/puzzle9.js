@@ -37,7 +37,7 @@ if (currentStage < 9) {
 
   cont.addEventListener('click', function(e){
     e.preventDefault();
-    window.location = "puzzle10.html";
+    window.location = "interm3.html";
   });
 
   document.getElementById('return-button').addEventListener('click', function(e){

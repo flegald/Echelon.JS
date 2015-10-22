@@ -47,7 +47,7 @@ if (currentStage < 6) {
 
   document.getElementById('cont').addEventListener('click', function(e) {
     e.preventDefault();
-    window.location = "puzzle7.html";
+    window.location = "interm2.html";
   });
 
   document.getElementById('return-button').addEventListener('click', function(e){
