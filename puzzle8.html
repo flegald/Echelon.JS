@@ -6,59 +6,68 @@
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
   <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
   <script src="javascript/universal.js"></script>
-
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
+      <h1>Echelon<span id="header2">.JS</span></h1>
     </header>
 
-    <section class="screen" style="min-height:550px">
-      <p>
-        var machina = [34, 57, 23, 74, 12, 58, 64, 83]; <br />
-        for (var i = 0; i < machina.length; i+=2) { <br />
-          &nbsp;&nbsp;if (machina[i] % 2 === 1) { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Bond'); <br />
-          &nbsp;&nbsp;} else { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log('James'); <br />
-          &nbsp;&nbsp;} <br />
-        } <br /><br />
-  </p>
-
-      <p>What will be logged to the console when running the code above?</p>
-
-<!--       <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p> -->
-
-      <form>
-        <button class="timeButt" style="display:inline" id="correct-button"/>
-          James<br />Bond<br />James<br />James
-        </button>
-        <button class="timeButt" style="display:inline" id="wrong-a"/>
-          James<br />James<br />Bond<br />James
-        </button>
-        <button class="timeButt" style="display:inline" id="wrong-b"/>
-          Bond<br />James<br />James<br />Bond
-        </button>
-        <button class="timeButt" style="display:inline" id="wrong-c"/>
-          Bond<br />James<br />James<br />James
-        </button>
-      </form>
-
-      <div id="res-contain" class="hidden">
-        <article id="res-correct" class="hidden">
-          <p>ACCESS GRANTED</p>
-          <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
-        </article>
-
-        <article id="res-wrong" class="hidden">
-          <p>ACCESS DENIED</p>
-          <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
-          <button id="return-button">Return</button>
-        </article>
-        <button id="cont" class="hidden">Continue</button>
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer"></div>
       </div>
+    </div>
+
+    <section class="progress">
+      <div id="puzzle-8">Door 8/10</div>
+    </section>
+
+    <section class="screen" style="min-height:550px">
+      <article id="question">
+        <code>
+          var machina = [34, 57, 23, 74, 12, 58, 64, 83]; <br />
+          for (var i = 0; i < machina.length; i += 2) { <br />
+            &nbsp;&nbsp;if (machina[i] % 2 === 1) { <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;console.log('Bond'); <br />
+            &nbsp;&nbsp;} else { <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;console.log('James'); <br />
+            &nbsp;&nbsp;} <br />
+          } <br /><br />
+        </code>
+
+        <p>What will be logged to the console when running the code above?</p>
+
+        <form>
+          <button class="timeButt" style="display:inline" id="correct-button"/>
+            James<br />Bond<br />James<br />James
+          </button>
+          <button class="timeButt" style="display:inline" id="wrong-a"/>
+            James<br />James<br />Bond<br />James
+          </button>
+          <button class="timeButt" style="display:inline" id="wrong-b"/>
+            Bond<br />James<br />James<br />Bond
+          </button>
+          <button class="timeButt" style="display:inline" id="wrong-c"/>
+            Bond<br />James<br />James<br />James
+          </button>
+        </form>
+
+      </article>
+
+      <article id="res-correct" class="hidden">
+        <p>ACCESS GRANTED</p>
+        <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
+        <button id="cont">Continue</button>
+      </article>
+
+      <article id="res-wrong" class="hidden">
+        <p><span class="warning">ACCESS DENIED</span></p>
+        <p>The for-loop iterates by two and logs "James" for even numbers and "Bond" for odd (machina[i] % 2 === 1).</p>
+        <button id="return-button">Return</button>
+      </article>
 
     </section>
 
@@ -66,8 +75,10 @@
       <a href="index.html">Home</a> &bull;
       <a href="">About Us</a>
     </footer>
+
   </main>
-  <!--<script type="text/javascript" src="JavaScript/app.js"></script> -->
+
   <script src="Javascript/puzzle8.js"></script>
+
 </body>
 </html>

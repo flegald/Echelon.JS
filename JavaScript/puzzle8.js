@@ -15,12 +15,12 @@ if (currentStage < 8) {
   console.log("Cheater");
 } else {
 
-  timerAll( 90, 'res-contain');
+  // timerAll( 90, 'res-contain');
 
   buttonRight.addEventListener('click', function(e){
     e.preventDefault();
     localize(9);
-    resContain.className = 'visible';
+
     resCorrect.className = 'visible';
     buttonGo.className = 'visible';
     buttonRight.className = 'hidden';
@@ -36,7 +36,7 @@ if (currentStage < 8) {
 
   wrongA.addEventListener('click', function(e){
     e.preventDefault();
-    resContain.className = 'visible';
+
     resWrong.className = 'visible';
     buttonRight.className = 'hidden';
     wrongA.className = 'hidden';
@@ -45,7 +45,7 @@ if (currentStage < 8) {
   });
   wrongB.addEventListener('click', function(e){
     e.preventDefault();
-    resContain.className = 'visible';
+
     resWrong.className = 'visible';
     buttonRight.className = 'hidden';
     wrongA.className = 'hidden';
@@ -54,7 +54,7 @@ if (currentStage < 8) {
   });
   wrongC.addEventListener('click', function(e){
     e.preventDefault();
-    resContain.className = 'visible';
+
     resWrong.className = 'visible';
     buttonRight.className = 'hidden';
     wrongA.className = 'hidden';
