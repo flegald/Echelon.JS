@@ -70,10 +70,6 @@ setTimeout(function() {
 //   }
 // });
 
-$('#user-button').on('click', function(){
-  window.location.href = 'puzzle1.html';
-});
-
 // Button specific to the Fail.html page redirecting to the index
 $('#return-button').on('click', function(){
   window.location.href = 'index.html';
@@ -90,12 +86,18 @@ if (document.getElementById('user-button')) {
   userButton.addEventListener('click', function(e) {
     var agentName = document.getElementById('agent-name');
     var agentAlias = document.getElementById('agent-alias');
+    var error = document.getElementById('input-error');
     e.preventDefault();
-    tempAgentName = JSON.stringify(agentName.value);
-    tempAgentAlias = JSON.stringify(agentAlias.value);
-    localStorage.setItem('AgentName', tempAgentName);
-    localStorage.setItem('AgentAlias', tempAgentAlias);
-    agentName.value = '';
-    agentAlias.value = '';
+    if (agentName.value == '' || agentAlias.value == '') {
+      error.className = 'visible';
+    } else {
+      tempAgentName = JSON.stringify(agentName.value);
+      tempAgentAlias = JSON.stringify(agentAlias.value);
+      localStorage.setItem('AgentName', tempAgentName);
+      localStorage.setItem('AgentAlias', tempAgentAlias);
+      agentName.value = '';
+      agentAlias.value = '';
+      window.location.href = 'puzzle1.html';
+    }
   });
 }
