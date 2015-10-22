@@ -1,0 +1,39 @@
+#door {
+  margin-top: 125px;
+  left: 38%;
+  position: relative;
+
+}
+
+#left {
+
+  position: absolute;
+  /*left: 0;*/
+
+}
+
+#center {
+
+  position: relative;
+  /*left: 0;*/
+
+}
+
+#right {
+
+  position: relative;
+  left: -235px;
+}
+
+#topLine{
+  position: absolute;
+  top: 2px;
+  left: -367px;
+  border-top: 1px solid #00f500;
+  border-bottom: 1px solid #00f500;
+ /* max-width: 960px;
+  min-width: 560px;*/
+  width: 960px;
+  height: 244px;
+}
+
