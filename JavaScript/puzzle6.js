@@ -28,17 +28,26 @@ if (currentStage < 6) {
        str4 === 'this.dream=function(){') {
       response.className="visible";
       submit.className="hidden";
+      ans1.className="hidden";
+      ans2.className="hidden";
+      ans3.className="hidden";
+      ans4.className="hidden";
       localize(7);
     } else {
-      response.className="visible";
+      response.className="hidden";
       wrong.className="visible";
       cont.className = "hidden";
+      submit.className = "hidden";
+      ans1.className="hidden";
+      ans2.className="hidden";
+      ans3.className="hidden";
+      ans4.className="hidden";
     }
   });
 
   cont.addEventListener('click', function(e) {
     event.preventDefault();
-    window.location ="puzzle7.html";
+    window.location = "puzzle7.html";
   });
 
   document.getElementById('return-button').addEventListener('click', function(e){
