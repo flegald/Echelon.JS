@@ -1,20 +1,28 @@
-var ans1 = document.getElementById('ans1');
-var ans2 = document.getElementById('ans2');
-var ans3 = document.getElementById('ans3');
-var ans4 = document.getElementById('ans4');
-var submit = document.getElementById('submit');
-var cont = document.getElementById('cont');
-var wrong = document.getElementById('wrong');
-
 var currentStage;
 getLocal();
 
 if (currentStage < 6) {
   window.location.href = 'index.html';
-  console.log("Cheater");
+  alert('Cheater');
 } else {
 
-  timerAll( 90, 'response');
+  var ans1 = document.getElementById('ans1');
+  var ans2 = document.getElementById('ans2');
+  var ans3 = document.getElementById('ans3');
+  var ans4 = document.getElementById('ans4');
+  var submit = document.getElementById('submit');
+  var wrong = document.getElementById('res-wrong');
+  var correct = document.getElementById('res-correct');
+
+  var disableButtons = function() {
+    ans1.disabled = true;
+    ans2.disabled = true;
+    ans3.disabled = true;
+    ans4.disabled = true;
+    submit.disabled = true;
+  }
+
+  timerAll(90);
 
   submit.addEventListener('click', function(e){
     event.preventDefault();
@@ -26,32 +34,24 @@ if (currentStage < 6) {
        str2 === 'this.beam=beam;' &&
        str3 === 'this.xtype=xtype;' &&
        str4 === 'this.dream=function(){') {
-      response.className="visible";
-      submit.className="hidden";
-      ans1.className="hidden";
-      ans2.className="hidden";
-      ans3.className="hidden";
-      ans4.className="hidden";
+      correct.className="visible";
       localize(7);
+      disableButtons();
+      stopTimer();
     } else {
-      response.className="hidden";
       wrong.className="visible";
-      cont.className = "hidden";
-      submit.className = "hidden";
-      ans1.className="hidden";
-      ans2.className="hidden";
-      ans3.className="hidden";
-      ans4.className="hidden";
+      disableButtons();
+      stopTimer();
     }
   });
 
-  cont.addEventListener('click', function(e) {
-    event.preventDefault();
+  document.getElementById('cont').addEventListener('click', function(e) {
+    e.preventDefault();
     window.location = "puzzle7.html";
   });
 
   document.getElementById('return-button').addEventListener('click', function(e){
-    event.preventDefault();
+    e.preventDefault();
     window.location = "Fail.html";
   });
 

@@ -4,71 +4,64 @@ console.log(currentStage);
 
 if (currentStage < 2) {
   window.location.href = 'index.html';
-  console.log("Cheater");
+  alert('Cheater');
 } else {
 
-  timerAll( 90, 'response');
-
-  //Add Event Listen buttons functions:
+  // Add Event Listen buttons functions:
   var ansa = document.getElementById('ansa');
   var ansb = document.getElementById('ansb');
   var ansc = document.getElementById('ansc');
   var ansd = document.getElementById('ansd');
-  var cont = document.getElementById('cont');
   var correct = document.getElementById('res-correct');
   var wrong = document.getElementById('res-wrong');
 
-  //Event Lisnters for Answers
+  var disableButtons = function () {
+    ansa.disabled = true;
+    ansb.disabled = true;
+    ansc.disabled = true;
+    ansd.disabled = true;
+  };
+
+  timerAll(90);
+
+  // Event Listeners for Answers
   ansa.addEventListener('click', function(e) {
     event.preventDefault();
     localize(3);
     correct.className="visible";
-    ansa.className="hidden";
-    ansb.className="hidden";
-    ansc.className="hidden";
-    ansd.className="hidden";
-    document.getElementById('return-button').className = 'hidden';
-
+    disableButtons();
+    stopTimer();
   });
 
   ansb.addEventListener('click', function(e) {
     event.preventDefault();
     wrong.className="visible";
-    cont.className="hidden";
-    ansa.className="hidden";
-    ansb.className="hidden";
-    ansc.className="hidden";
-    ansd.className="hidden";
-    });
+    disableButtons();
+    stopTimer();
+  });
+
   ansc.addEventListener('click', function(e) {
     event.preventDefault();
     wrong.className="visible";
-    cont.className="hidden";
-    ansa.className="hidden";
-    ansb.className="hidden";
-    ansc.className="hidden";
-    ansd.className="hidden";
-
+    disableButtons();
+    stopTimer();
   });
 
   ansd.addEventListener('click', function(e){
     event.preventDefault();
     wrong.className="visible";
-    cont.className="hidden";
-    ansa.className="hidden";
-    ansb.className="hidden";
-    ansc.className="hidden";
-    ansd.className="hidden";
-
+    disableButtons();
+    stopTimer();
   });
 
 //Continue and Returns buttons.
   document.getElementById('return-button').addEventListener('click', function(e){
+    e.preventDefault();
     window.location = 'Fail.html';
   });
 
-  cont.addEventListener('click', function(e) {
+  document.getElementById('cont').addEventListener('click', function(e) {
+    e.preventDefault();
     window.location= "puzzle3.html";
   });
-
 }
