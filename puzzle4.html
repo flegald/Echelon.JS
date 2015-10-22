@@ -4,19 +4,24 @@
   <title>Echelon.JS</title>
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
-  <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
   <script src="JavaScript/universal.js"></script>
-
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
+      <h1>Echelon<span id="header2">.JS</span></h1>
     </header>
 
-    <section class="progress">
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer"></div>
+      </div>
+    </div>
 
+    <section class="progress">
+      <div id="puzzle-4">Door 4/10</div>
     </section>
 
     <section class="screen">
@@ -24,31 +29,30 @@
         <p>True or False:</p>
         <p>typeof(new Boolean(false)) will return "boolean".</p>
         <form>
-          <input type="radio" id="ans-true" name="answer" value="True">True
-          <input type="radio" id="ans-false" name="answer" value="False">False
-          <button class="timeButt" id="submit-button">Submit</button>
+          <button id="ans-true">True</button>
+          <button id="ans-false">False</button>
         </form>
       </article>
 
-      <div id="res-contain" class="hidden">
-        <article id="res-correct" class="hidden">
-          <p>That's correct. new Boolean() calls for an object.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <button id="cont">Continue</button>
-        </article>
+      <article id="res-correct" class="hidden">
+        <p>ACCESS GRANTED</p>
+        <p>The "new" keyword calls for a boolean object.</p>
+        <button id="cont">Continue</button>
+      </article>
 
-        <article id="res-wrong" class="hidden">
-          ACCESS DENIED
-          <button id="return-button">Return</button>
-        </article>
-      </div>
+      <article id="res-wrong" class="hidden">
+        <p><span class="warning">ACCESS DENIED</span></p>
+        <p>Hint: The "new" keyword calls for an object.</p>
+        <button id="return-button">Return</button>
+      </article>
 
     </section>
 
     <footer>
       <a href="index.html">Home</a> &bull;
-      <a href="">About Us</a>
+      <a href="about-us.html">About Us</a>
     </footer>
+    
   </main>
   <script type="text/javascript" src="JavaScript/puzzle4.js"></script>
 </body>
