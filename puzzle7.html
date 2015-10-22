@@ -26,7 +26,7 @@
 
     <section class="screen">
       <article id="question">
-        <p>Given z is true and x || (!y && z) is false, <br />what must be the boolean value of y?</p>
+        <p>Given <code>z</code> is <code>true</code> and <code>x || (!y && z)</code> is <code>false</code>, <br />what must be the boolean value of <code>y</code>?</p>
         <form>
           <button id="ans-true">true</button>
           <button id="ans-false">false</button>
@@ -35,13 +35,13 @@
 
       <article id="res-correct" class="hidden">
         <p>ACCESS GRANTED</p>
-        <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clauses is false. Since z is true, !y must be false, and so y is true.</p>
+        <p>Both <code>x</code> and <code>(!y && z)</code> must be <code>false</code> if <code>x || (!y && z)</code> is <code>false</code>. <code>(!y && z)</code> is <code>false</code> when at least one of the clauses is <code>false</code>. Since <code>z</code> is <code>true</code>, <code>!y</code> must be <code>false</code>.</p>
         <button id="cont">Continue</button>
       </article>
 
       <article id="res-wrong" class="hidden">
         <p><span class="warning">ACCESS DENIED</span></p>
-        <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clauses is false. Since z is true, !y must be false, and so y is true.</p>
+        <p>Both <code>x</code> and <code>(!y && z)</code> must be <code>false</code> if <code>x || (!y && z)</code> is <code>false</code>. <code>(!y && z)</code> is <code>false</code> when at least one of the clauses is <code>false</code>. Since <code>z</code> is <code>true</code>, <code>!y</code> must be <code>false</code>.</p>
         <button id="return-button">Return</button>
       </article>
 
