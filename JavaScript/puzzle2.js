@@ -14,7 +14,6 @@ if (currentStage < 2) {
   var ansb = document.getElementById('ansb');
   var ansc = document.getElementById('ansc');
   var ansd = document.getElementById('ansd');
-  var response = document.getElementById('response');
   var cont = document.getElementById('cont');
 
   ansa.addEventListener('click', function(e) {
