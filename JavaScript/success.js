@@ -3,13 +3,21 @@ var prize = document.getElementById('prize');
 var open = document.getElementById('open');
 var vdoor = document.getElementById('vaultdoor');
 
-getUserName();
+var tempName = localStorage.getItem('AgentName');
+var tempAlias = localStorage.getItem('AgentAlias');
+var userName = JSON.parse(tempName);
+var userAlias = JSON.parse(tempAlias);
 
+
+var putAlias = document.getElementById('putAlias');
+
+var writeAlias = function() {
+  putAlias.innerHTML=userAlias;
+};
+
+writeAlias();
 vdoor.addEventListener('click', function(e){
   door.className ="hidden";
   prize.className ="visible";
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> da617b789e970f9b46779eb4f4fb5fa5d03bd027
