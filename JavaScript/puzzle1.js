@@ -1,36 +1,25 @@
-var wroAns = document.getElementById('wroButt');
-var corAns = document.getElementById('corButt');
-var show = document.getElementById('end');
+var wroAns = document.getElementById('ans-True');
+var corAns = document.getElementById('ans-False');
+var showCor = document.getElementById('res-correct');
+var showWro = document.getElementById('res-wrong');
 var cont =  document.getElementById('cont')
 
 var currentStage = 1;
 localize(1);
 console.log(currentStage);
 
-timerAll(90,'end');
+// timerAll(90,'end');
 
 corAns.addEventListener('click', function(e){
 	event.preventDefault();
-	show.className = ('visible');
-  document.getElementById('wrong').className = ('hidden');
-  wroAns.className = ('hidden');
-  corAns.className = ('hidden');
-
-  document.getElementById('return-button').className = "hidden";
-
+	showCor.className = ('visible');
   localize(2);
-
-});
+	});
 
 
 wroAns.addEventListener('click', function(e){
 	event.preventDefault();
-	show.className = ('visible');
-	document.getElementById("correct").className = ('hidden');
-	document.getElementById('cont').className = ('hidden');
- 	wroAns.className = ('hidden');
-  corAns.className = ('hidden');
- 
+	showWro.className = ('visible');
 });
 
 document.getElementById('return-button').addEventListener('click', function(e){

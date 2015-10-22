@@ -2,7 +2,8 @@ var anOne = document.getElementById('aOne');
 var anTwo = document.getElementById('aTwo');
 var anThree = document.getElementById('aThree');
 var subButton = document.getElementById('subButt');
-var show = document.getElementById('answer');
+var showCor = document.getElementById('res-correct');
+var showWro = document.getElementById('res-wrong');
 var contin = document.getElementById('cont');
 
 var currentStage;
@@ -18,16 +19,10 @@ if (currentStage < 3) {
 		event.preventDefault();
 		if ((anOne.value == "'morals'" && anTwo.value == "'cpu'" && anThree.value == "'emotion'") || (anOne.value == 'morals' && anTwo.value == 'cpu' && anThree.value == 'emotion') || (anOne.value == '"morals"' && anTwo.value == '"cpu"' && anThree.value == '"emotion"') 
 		){
+			showCor.className = ('visible');
 			localize(4);
-			show.className = ('visible');
-			document.getElementById('wroAns').className = ('hidden');
-			subButton.className = ('hidden');
-			document.getElementById('return-button').className = 'hidden';
 		} else {
-			show.className = ('visible');
-			contin.className = ('hidden');
-			document.getElementById('corAns').className = ('hidden');
-			subButton.className = ('hidden');	
+			showWro.className = ('visible');
 		}
 		})
 
@@ -39,7 +34,7 @@ if (currentStage < 3) {
 	document.getElementById('return-button').addEventListener('click', function(e){
 		event.preventDefault();
 		window.location.href = ('Fail.html');
-	})
+	});
 
 }
 

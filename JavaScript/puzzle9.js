@@ -1,7 +1,8 @@
 var anOne = document.getElementById('aOne');
 var anTwo = document.getElementById('aTwo');
 var submitButt = document.getElementById('subButt');
-var show = document.getElementById('hide');
+var showCor = document.getElementById('res-correct');
+var showWro = document.getElementById('res-wrong');
 var cont = document.getElementById('cont')
 
 var currentStage;
@@ -18,16 +19,10 @@ if (currentStage < 9) {
   submitButt.addEventListener('click', function(e){
     event.preventDefault();
     if ((anOne.value == 12 && anTwo.value == 'undefined') || (anOne.value == 12 && anTwo.value == 'Undefined')){
-    	show.className = ('visible');
-    	document.getElementById('wroAns').className = ('hidden');
-      submitButt.className = "hidden";
+    	showCor.className = ('visible');
       localize(10);
-      document.getElementById('return-button').className = 'hidden';
     } else {
-    	show.className = ('visible');
-    	document.getElementById('corAns').className = ('hidden');
-    	document.getElementById('cont').className = ('hidden');
-      submitButt.className = "hidden";
+    	showWro.className = ('visible');
     }
   });
 
