@@ -38,7 +38,13 @@ function getLocal() {
     currentStage = JSON.parse(tempWins);
 }
 
-
+//Added by Mike- Don's code for getting names for final page.
+function getUserName() {
+  var tempName = localStorage.getItem('AgentName');
+  var tempAlias = localStorage.getItem('AgentAlias');
+  var userName = JSON.parse(tempName);
+  var userAlias = JSON.parse(tempAlias);
+}
 
 
 
