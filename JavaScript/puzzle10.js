@@ -1,5 +1,3 @@
-var submitButton = document.getElementById('submit-button');
-
 var currentStage;
 getLocal();
 
@@ -8,12 +6,14 @@ if (currentStage < 10) {
   console.log("Cheater");
 } else {
 
-  timerAll( 90, 'res-contain');
+  // timerAll( 90, 'res-contain');
 
+  var submitButton = document.getElementById('submit-button');
+  
   submitButton.addEventListener('click', function(e){
     e.preventDefault();
-    document.getElementById('res-contain').className = 'visible';
-    submitButton.className = 'hidden';
+    submitButton.disabled = true;
+document.getElementById('text-input').disabled = true;
     var textInput = document.getElementById('text-input').value;
     if (textInput === '121') {
       document.getElementById('res-correct').className = 'visible';
@@ -22,8 +22,11 @@ if (currentStage < 10) {
     }
   });
 
-  document.getElementById('return-button').addEventListener('click', function(e){
-    event.preventDefault();
+  document.getElementById('cont').addEventListener('click', function(){
+    window.location.href = '';
+  });
+
+  document.getElementById('return-button').addEventListener('click', function(){
     window.location.href = 'Fail.html';
   });
 }

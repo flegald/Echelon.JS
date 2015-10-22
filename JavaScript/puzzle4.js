@@ -5,34 +5,33 @@ if (currentStage < 4) {
   window.location.href = 'index.html';
   console.log("Cheater");
 } else {
+  // timerAll(90, 'res-contain');
 
+  var trueButton = document.getElementById('ans-true');
+  var falseButton = document.getElementById('ans-false');
 
-  timerAll(90, 'res-contain');
-
-
-  var submitButton = document.getElementById('submit-button');
-  submitButton.addEventListener('click', function(e){
+  // event listener for correct answer
+  falseButton.addEventListener('click', function(e){
     e.preventDefault();
-    if (document.getElementById('ans-false').checked) {
-      localize(5);
-      document.getElementById('res-correct').className = 'visible';
-      document.getElementById('res-contain').className = 'visible';
-      document.getElementById('return-button').className = 'hidden';
-    } else {
-      document.getElementById('res-wrong').className = 'visible';
-      document.getElementById('res-contain').className = 'visible';
-    }
-    submitButton.className = 'hidden';
+    localize(5);
+    document.getElementById('res-correct').className = 'visible';
+    trueButton.disabled = true;
+    falseButton.disabled = true;
   });
 
-  var contButton = document.getElementById('cont');
-  contButton.addEventListener('click', function(){
+  // event listener for wrong answer
+  trueButton.addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('res-wrong').className = 'visible';
+    trueButton.disabled = true;
+    falseButton.disabled = true;
+  });
+
+  document.getElementById('cont').addEventListener('click', function(){
     window.location.href = 'puzzle5.html';
   });
 
-  document.getElementById('return-button').addEventListener('click', function(e){
-  event.preventDefault();
-  window.location.href = 'Fail.html';
-  })
+  document.getElementById('return-button').addEventListener('click', function(){
+    window.location.href = 'Fail.html';
+  });
 }
-
