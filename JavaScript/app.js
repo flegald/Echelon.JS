@@ -53,7 +53,7 @@ setTimeout(function() {
 var delayTime2 = document.getElementById('line2').innerHTML.length * typeSpeed + typeGap;
 
 setTimeout(function() {
-  document.getElementById('accept-button').className = 'visible';
+  document.getElementById('agent-login').className = 'visible';
 }, delayTime1 + delayTime2);
 
 // Specific for Fail.html button
@@ -63,14 +63,14 @@ setTimeout(function() {
 
 
 // keypress and click listeners for moving to the first puzzle
-$(document).keypress(function(key){
-  console.log(key.which);
-  if (key.which == 13 || key.which == 121) {
-    window.location.href = 'http://www.google.com';
-  }
-});
+// $(document).keypress(function(key){
+//   console.log(key.which);
+//   if (key.which == 13 || key.which == 121) {
+//     window.location.href = 'http://www.google.com';
+//   }
+// });
 
-$('#accept-button').on('click', function(){
+$('#user-button').on('click', function(){
   window.location.href = 'puzzle1.html';
 });
 
@@ -84,16 +84,18 @@ var currentStage;
 localize(1);
 
 //Add user name to localStorage
-var userButton = document.getElementById('user-button');
-var agentName = document.getElementById('agent-name');
-var agentAlias = document.getElementById('agent-alias');
 
-userButton.addEventListener('click', function(e) {
-  e.preventDefault();
-  tempAgentName = JSON.stringify(agentName.value);
-  tempAgentAlias = JSON.stringify(agentAlias.value);
-  localStorage.setItem('AgentName', tempAgentName);
-  localStorage.setItem('AgentAlias', tempAgentAlias);
-  agentName.value = '';
-  agentAlias.value = '';
-});
+if (document.getElementById('user-button')) {
+  var userButton = document.getElementById('user-button');
+  userButton.addEventListener('click', function(e) {
+    var agentName = document.getElementById('agent-name');
+    var agentAlias = document.getElementById('agent-alias');
+    e.preventDefault();
+    tempAgentName = JSON.stringify(agentName.value);
+    tempAgentAlias = JSON.stringify(agentAlias.value);
+    localStorage.setItem('AgentName', tempAgentName);
+    localStorage.setItem('AgentAlias', tempAgentAlias);
+    agentName.value = '';
+    agentAlias.value = '';
+  });
+}
