@@ -29,6 +29,12 @@ if (currentStage < 5) {
     localize(6);
   });
 
+
+  document.getElementById('return-button').addEventListener('click', function(e){
+    event.preventDefault();
+    window.location.href = 'Fail.html';
+  });
+
   buttonGo.addEventListener('click', function(){
     window.location.href="puzzle6.html";
   });
@@ -62,3 +68,4 @@ if (currentStage < 5) {
   });
 
 }
+

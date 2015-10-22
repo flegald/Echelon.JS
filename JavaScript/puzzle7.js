@@ -9,6 +9,7 @@ if (currentStage < 7) {
   console.log("Cheater");
 } else {
 
+
   timerAll( 90, 'res-contain');
 
   trueButton.addEventListener('click', function(e){
@@ -32,4 +33,9 @@ if (currentStage < 7) {
     window.location.href = 'puzzle8.html';
   });
 
+  document.getElementById('return-button').addEventListener('click', function(e){
+    event.preventDefault();
+    window.location.href = 'Fail.html';
+  });
 }
+

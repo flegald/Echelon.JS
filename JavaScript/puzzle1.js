@@ -15,7 +15,11 @@ corAns.addEventListener('click', function(e){
   document.getElementById('wrong').className = ('hidden');
   wroAns.className = ('hidden');
   corAns.className = ('hidden');
+
+  document.getElementById('return-button').className = "hidden";
+
   localize(2);
+
 });
 
 
@@ -26,12 +30,15 @@ wroAns.addEventListener('click', function(e){
 	document.getElementById('cont').className = ('hidden');
  	wroAns.className = ('hidden');
   corAns.className = ('hidden');
+ 
 });
 
-
+document.getElementById('return-button').addEventListener('click', function(e){
+	window.location = 'Fail.html';
+});
 
 cont.addEventListener('click', function(e){
-  window.location= "puzzle2.html";
+  window.location = "puzzle2.html";
 });
 
 
