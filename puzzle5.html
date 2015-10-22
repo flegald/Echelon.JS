@@ -12,46 +12,59 @@
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
+      <h1>Echelon<span id="header2">.JS</span></h1>
     </header>
 
-    <section class="screen" style="min-height:550px">
-      <p>
-      var cinGex = ['C-N36','P-9','TOG-77','SE-4']; <br />
-  var alGex = document.createElement('ul'); <br /> <br />
-
-  for (var i = cinGex.length - 1; i >= 0; i--) { <br />
-    &nbsp;&nbsp;var repose = document.createElement('li'); <br />
-    &nbsp;&nbsp;repose.appendChild(document.createTextNode(cinGex[i])); <br />
-    &nbsp;&nbsp;alGex.appendChild(repose); <br />
-  } <br />
-  function gexSel() { <br />
-     &nbsp;&nbsp;return alGex.lastChild.previousSibling.textContent; <br />
-  } <br /><br />
-  </p>
-
-      <p>When calling the function gexSel(), which will be returned?</p>
-
-<!--       <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p> -->
-      <form>
-        <button class="timeButt" style="display:inline" id="correct-button"/>P-9</button>
-        <button class="timeButt" style="display:inline" id="wrong-a"/>C-N36</button>
-        <button class="timeButt" style="display:inline" id="wrong-b"/>SE-4</button>
-        <button class="timeButt" style="display:inline" id="wrong-c"/>TOG-77</button>
-      </form>
-      <div id="res-contain" class="hidden">
-        <article id="res-correct" class="hidden">
-          <p>ACCESS GRANTED</p>
-          <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
-        </article>
-        <article id="res-wrong" class="hidden">
-          <p>ACCESS DENIED</p>
-          <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
-          <button id="return-button">Continue</button>
-        </article>
-        <button id="cont" class="hidden">Return</button>
-
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer"></div>
       </div>
+    </div>
+
+    <section class="progress">
+      <div id="puzzle-5">Door 5/10</div>
+    </section>
+
+    <section class="screen">
+      <article id="question">
+        <code>
+          var cinGex = ['C-N36','P-9','TOG-77','SE-4']; <br />
+          var alGex = document.createElement('ul'); <br /> <br />
+
+          for (var i = cinGex.length - 1; i >= 0; i--) { <br />
+          &nbsp;&nbsp;var repose = document.createElement('li'); <br />
+          &nbsp;&nbsp;repose.appendChild(document.createTextNode(cinGex[i])); <br />
+          &nbsp;&nbsp;alGex.appendChild(repose); <br />
+          } <br />
+          function gexSel() { <br />
+          &nbsp;&nbsp;return alGex.lastChild.previousSibling.textContent; <br />
+          } <br /><br />
+        </code>
+
+        <p>When calling the function gexSel(), which will be returned?</p>
+
+        <form>
+          <button id="correct-button"/>P-9</button>
+          <button id="wrong-a"/>C-N36</button>
+          <button id="wrong-b"/>SE-4</button>
+          <button id="wrong-c"/>TOG-77</button>
+        </form>
+
+      </article>
+
+      <article id="res-correct" class="hidden">
+        <p>ACCESS GRANTED</p>
+        <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
+
+        <button id="cont" class="hidden">Continue</button>
+      </article>
+
+      <article id="res-wrong" class="hidden">
+        <p><span class="warning">ACCESS DENIED</span></p>
+        <p>The function's for-loop appends each element in the array in the reverse order. The function then returns the previous sibling of the last child appended. </p>
+        <button id="return-button">Return</button>
+      </article>
 
     </section>
 
@@ -59,8 +72,10 @@
       <a href="index.html">Home</a> &bull;
       <a href="">About Us</a>
     </footer>
+
   </main>
-  <!--<script type="text/javascript" src="JavaScript/app.js"></script> -->
+
   <script src="Javascript/puzzle5.js"></script>
+
 </body>
 </html>
