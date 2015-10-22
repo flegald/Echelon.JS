@@ -5,14 +5,20 @@ var typeSpeed = 40;
 
 var cursorChar = '&#9608;';
 
-var originText = [document.getElementById('line1').innerHTML, document.getElementById('line2').innerHTML];
+var originText;
+if (document.getElementById('agent-login')) {
+  originText = [document.getElementById('line1').innerHTML, document.getElementById('line2').innerHTML];
+}
+if (document.getElementById('return-button')) {
+  originText = [('...... ' + localStorage.getItem('AgentAlias') + document.getElementById('line1').innerHTML), document.getElementById('line2').innerHTML];
+}
 
 var currentTimeout;
 var showCursor;
 
-var typeWriter = function(id) {
+var typeWriter = function(id, order) {
   var loc = document.getElementById(id);
-  var fullText = loc.innerHTML;
+  var fullText = originText[order];
   var letter = 0;
 
   // this function types one letter per call, then calls the subsequent typeLetter()
@@ -42,19 +48,19 @@ var typeWriter = function(id) {
 
 var typeLine1 = setTimeout(function() {
   document.getElementById('cursor-line').className = 'hidden';
-  typeWriter('line1');
+  typeWriter('line1', 0);
 }, typeWait);
 
 var delayTime1 = typeWait
-  + document.getElementById('line1').innerHTML.length * typeSpeed
+  + originText[0].length * typeSpeed
   + 50 + typeGap;
 
 var typeLine2 = setTimeout(function() {
   document.getElementById('cursor-line').className = 'hidden';
-  typeWriter('line2');
+  typeWriter('line2', 1);
 }, delayTime1);
 
-var delayTime2 = document.getElementById('line2').innerHTML.length * typeSpeed + typeGap;
+var delayTime2 = originText[1].length * typeSpeed + typeGap;
 
 // specific for index.html
 var showLogin;
@@ -118,6 +124,9 @@ $(document).keypress(function(key){
 $('#return-button').on('click', function(){
   window.location.href = 'index.html';
 });
+
+// For showing Alias name in Fail.html
+// document.getElementById('line1').innerHTML = '......' + localStorage.getItem('AgentAlias') + ' you have proven yourself in need of more practice to reach the goal';
 
 //Reset local storage
 var currentStage;
