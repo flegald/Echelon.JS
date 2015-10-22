@@ -31,3 +31,9 @@ function getLocal() {
     var tempWins = localStorage.getItem("WillFerrell");
     currentStage = JSON.parse(tempWins);
 }
+
+
+//Added by Mike- Don's code for getting names for final page.
+
+
+
