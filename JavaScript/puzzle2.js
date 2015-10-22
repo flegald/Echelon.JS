@@ -15,11 +15,14 @@ if (currentStage < 2) {
   var ansc = document.getElementById('ansc');
   var ansd = document.getElementById('ansd');
   var cont = document.getElementById('cont');
+  var correct = document.getElementById('res-correct');
+  var wrong = document.getElementById('res-wrong');
 
+  //Event Lisnters for Answers
   ansa.addEventListener('click', function(e) {
     event.preventDefault();
     localize(3);
-    response.className="visible"
+    correct.className="visible";
     ansa.className="hidden";
     ansb.className="hidden";
     ansc.className="hidden";
@@ -30,7 +33,7 @@ if (currentStage < 2) {
 
   ansb.addEventListener('click', function(e) {
     event.preventDefault();
-    response.className="visible";
+    wrong.className="visible";
     cont.className="hidden";
     ansa.className="hidden";
     ansb.className="hidden";
@@ -39,7 +42,7 @@ if (currentStage < 2) {
     });
   ansc.addEventListener('click', function(e) {
     event.preventDefault();
-    response.className="visible";
+    wrong.className="visible";
     cont.className="hidden";
     ansa.className="hidden";
     ansb.className="hidden";
@@ -50,7 +53,7 @@ if (currentStage < 2) {
 
   ansd.addEventListener('click', function(e){
     event.preventDefault();
-    response.className="visible";
+    wrong.className="visible";
     cont.className="hidden";
     ansa.className="hidden";
     ansb.className="hidden";
@@ -59,6 +62,7 @@ if (currentStage < 2) {
 
   });
 
+//Continue and Returns buttons.
   document.getElementById('return-button').addEventListener('click', function(e){
     window.location = 'Fail.html';
   });
