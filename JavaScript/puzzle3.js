@@ -39,7 +39,7 @@ if (currentStage < 3) {
 
 	contin.addEventListener('click', function(e){
 		e.preventDefault();
-		window.location.href = ('puzzle4.html');
+		window.location.href = ('interm1.html');
 	});
 
 	document.getElementById('return-button').addEventListener('click', function(e){

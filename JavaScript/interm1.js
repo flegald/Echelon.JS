@@ -24,3 +24,7 @@ $(function() {
     }, 2000);
 
 });
+
+setTimeout(function() {
+    window.location.href = 'puzzle4.html';
+}, 5000);
