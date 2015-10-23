@@ -44,4 +44,6 @@ $('#door').on('click', function() {
     prize.className = 'visible';
   }, 4000);
 
+  $('#door').off('click');
+
 });
