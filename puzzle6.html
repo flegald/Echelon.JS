@@ -30,27 +30,24 @@
     <article class="question">
      <code>
          1 &nbsp;&nbsp;var Eclipse = function(terra, beam, xtype) {<br />
-         2 &nbsp;&nbsp;&nbsp;&nbsp;var terra<br />
-         3 &nbsp;&nbsp;&nbsp;&nbsp;var beam<br />
-         4 &nbsp;&nbsp;&nbsp;&nbsp;var xtype<br />
-         5 &nbsp;&nbsp;&nbsp;&nbsp;function dream() {<br />
-         6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (this.xtype === "berg") {<br />
+         2 &nbsp;&nbsp;&nbsp;&nbsp;<span>_____</span>terra = terra;<br />
+         3 &nbsp;&nbsp;&nbsp;&nbsp;<span>_____</span>beam = beam;<br />
+         4 &nbsp;&nbsp;&nbsp;&nbsp;<span>_____</span>xtype = xtype;<br />
+         5 &nbsp;&nbsp;&nbsp;&nbsp;<span>_____</span>dream = function() {<br />
+         6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (this.xtype === 'berg') {<br />
          7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return(math.random() * this.beam);<br />
          8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (this.terra.length > 4) {<br />
          9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br />
          10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
-         11 &nbsp;&nbsp;&nbsp;}<br />
+         11 &nbsp;&nbsp;&nbsp;};<br />
          12 &nbsp;&nbsp;};<br />
-         13 &nbsp;&nbsp;var lumas = new Eclipse("celium", 186.72, 'droid');<br />
+         13 &nbsp;&nbsp;var lumas = new Eclipse('celium', 186.72, 'droid');<br />
          14 &nbsp;&nbsp;lumas.dream();<br /><br />
       </code>
 
-    <p>Rewrite Lines 2, 3, 4 and 5 to make the script run properly</p>
+    <p>What is missing from the blanks?</p>
     <form>
-      Line2:<input type="text" id="ans1" class="visible"><br>
-      Line3:<input type="text" id="ans2" class="visible"><br>
-      Line4:<input type="text" id="ans3" class="visible"><br>
-      Line5:<input type="text" id="ans4" class="visible"><br>
+     <input type="text" id="ans1" class="visible"><br>
       <button id="submit">Submit</button>
     </form>
 
