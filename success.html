@@ -26,13 +26,15 @@
 
   <section class="screen" style="min-height:662px;">
     <div id="congrats">
-      <h1>Congratulations!</h1>
-      <code><h2>You have done well Agent </code><span id="putAlias"></span>.</h2>
+      <h1 id="congrats-head">Congratulations!</h1>
+      <h2><span id="well-done">You have done well, Agent</span> <span id="putAlias"></span>.</h2>
       <p>You have passed through all the challenges and reached the central room.</p>
       <br>
     </div>
 
-    <p>Click on the vault to open and retrieve the package.</p>
+    <p><span id="clickText">Click</span> on the <span id="vaultText">vault</span> to open and retrieve the package.</p>
+    <div id="slugHover"></div>
+    <div id="slugClick"></div>
     <div id="door">
      <img id="left" src="img/doorLeft.png" />
      <img id="center" src="img/doorCenter.png" />
