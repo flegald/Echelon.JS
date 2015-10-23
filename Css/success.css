@@ -6,12 +6,28 @@
   position: absolute;
   top: 550px;
   left: 38%;
-
 }
 
 #prize {
   text-align: center;
 }
+
+#slugHover {
+  position: absolute;
+  width: 240px;
+  height: 250px;
+  left: 40%;
+  top: 480px;
+  z-index: 6;
+}
+/*#slugClick {
+  position: absolute;
+  width: 240px;
+  height: 250px;
+  left: 40%;
+  top: 480px;
+  z-index: 6;
+}*/
 
 #door {
   margin-top: 75px;
@@ -31,3 +47,16 @@
 .screen p {
   text-align: center;
 }
+#putAlias {
+  color: #FF902A;
+}
+#vaultText {
+  font-weight: bolder;
+  font-size: 25px;
+}
+#clickText {
+  font-weight: bold;
+  font-size: 20px;
+  color: #FF902A;
+}
+
