@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
   <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
+  <script src="JavaScript/universal.js"></script>
 </head>
 
 <body>
@@ -13,16 +14,24 @@
       <h1>Echelon<span id="header2">.JS</span></h1>
     </header>
 
-    <section class="screen">
+    <section class="screen" style="min-height:300px;">
       <p id="line1" class="hidden">Greetings, agent. Your mission, should you choose to accept it:</p>
-      <p id="line2" class="hidden">Using your JavaScript coding knowledge, access the central room of hhhhhhhhhhhh to retrieve blah blah blah. Good luck, agent!</p>
+      <p id="line2" class="hidden">Using your JavaScript coding knowledge, access the central vault of the evil OmniCorp Geoponic Industries to retrieve a relic from long ago. Good luck agent, the fate of the future rests in your JS skills.</p>
       <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p>
-      <button id="accept-button" class="hidden">Accept</button>
+      <form id="agent-login" class="hidden">
+        Name:&nbsp;&nbsp;<input type="text" id="agent-name" /><br />
+        Alias:&nbsp;<input type="text" id="agent-alias" />
+        <button id="user-button">Accept</button>
+        <code id="input-error" class="hidden"><span class="warning">Please input both Name and Alias</span></code>
+      </form>
     </section>
-    
+
+    <section>
+
+    </section>
     <footer>
       <a href="index.html">Home</a> &bull;
-      <a href="">About Us</a>
+      <a href="about-us.html">About Us</a>
     </footer>
   </main>
   <script type="text/javascript" src="JavaScript/app.js"></script>

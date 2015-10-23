@@ -1,45 +1,50 @@
-var anOne = document.getElementById('aOne');
-var anTwo = document.getElementById('aTwo');
-var anThree = document.getElementById('aThree');
-var subButton = document.getElementById('subButt');
-var show = document.getElementById('answer');
-var contin = document.getElementById('cont');
-
 var currentStage;
 getLocal();
 
 if (currentStage < 3) {
   window.location.href = 'index.html';
-  console.log("Cheater");
+  alert('Cheater');
 } else {
 
+	var anOne = document.getElementById('aOne');
+	var anTwo = document.getElementById('aTwo');
+	var anThree = document.getElementById('aThree');
+	var subButton = document.getElementById('subButt');
+	var showCor = document.getElementById('res-correct');
+	var showWro = document.getElementById('res-wrong');
+	var contin = document.getElementById('cont');
+
+	var disableButtons = function() {
+		anOne.disabled = true;
+		anTwo.disabled = true;
+		anThree.disabled = true;
+		subButton.disabled = true;
+	}
+
+	timerAll(90);
 
 	subButton.addEventListener('click', function(e){
 		event.preventDefault();
-		if ((anOne.value == "'morals'" && anTwo.value == "'cpu'" && anThree.value == "'emotion'") || (anOne.value == 'morals' && anTwo.value == 'cpu' && anThree.value == 'emotion') || (anOne.value == '"morals"' && anTwo.value == '"cpu"' && anThree.value == '"emotion"') 
-		){
+		if ((anOne.value == "'morals'" && anTwo.value == "'cpu'" && anThree.value == "'emotion'") || (anOne.value == 'morals' && anTwo.value == 'cpu' && anThree.value == 'emotion') || (anOne.value == '"morals"' && anTwo.value == '"cpu"' && anThree.value == '"emotion"') ){
+			showCor.className = ('visible');
 			localize(4);
-			show.className = ('visible');
-			document.getElementById('wroAns').className = ('hidden');
-			subButton.className = ('hidden');
-			document.getElementById('return-button').className = 'hidden';
+			disableButtons();
+			stopTimer();
 		} else {
-			show.className = ('visible');
-			contin.className = ('hidden');
-			document.getElementById('corAns').className = ('hidden');
-			subButton.className = ('hidden');	
+			showWro.className = ('visible');
+			disableButtons();
+			stopTimer();
 		}
-		})
+	});
 
 	contin.addEventListener('click', function(e){
-		event.preventDefault();
+		e.preventDefault();
 		window.location.href = ('puzzle4.html');
-	})
+	});
 
 	document.getElementById('return-button').addEventListener('click', function(e){
-		event.preventDefault();
+		e.preventDefault();
 		window.location.href = ('Fail.html');
-	})
-
+	});
 }
 

@@ -4,49 +4,52 @@
   <title>Echelon.JS</title>
   <link rel="stylesheet" type="text/css" href="Css/normalize.css">
   <link rel="stylesheet" type="text/css" href="Css/CSS.css">
-  <script type="text/javascript" src="JavaScript/jquery-1.11.3.min.js"></script>
   <script src="javascript/universal.js"></script>
-
 </head>
 
 <body>
   <main>
     <header>
-      <h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
+      <h1>Echelon<span id="header2">.JS</span></h1>
     </header>
 
-    <section class="progress">
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer"></div>
+      </div>
+    </div>
 
+    <section class="progress">
+      <div id="puzzle-7">Door 7/10</div>
     </section>
 
     <section class="screen">
       <article id="question">
-        <p>Given z is true and x || (!y && z) is false, <br />what must be the boolean value of y?</p>
+        <p>Given <code>z</code> is <code>true</code> and <code>x || (!y &amp;&amp; z)</code> is <code>false</code>, <br />what must be the boolean value of <code>y</code>?</p>
         <form>
-          <button class="timeButt" id="ans-true">true</button>
-          <button class="timeButt" id="ans-false">false</button>
+          <button id="ans-true">true</button>
+          <button id="ans-false">false</button>
         </form>
       </article>
 
-      <div id="res-contain" class="hidden">
-        <article id="res-correct" class="hidden">
-          <p>ACCESS GRANTED</p>
-          <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clause is false. Since z is true, !y must be false, and so y is true.</p>
-          <button id="cont">Continue</button>
-        </article>
+      <article id="res-correct" class="hidden">
+        <p>ACCESS GRANTED</p>
+        <p>Both <code>x</code> and <code>(!y &amp;&amp; z)</code> must be <code>false</code> if <code>x || (!y &amp;&amp; z)</code> is <code>false</code>. <code>(!y &amp;&amp; z)</code> is <code>false</code> when at least one of the clauses is <code>false</code>. Since <code>z</code> is <code>true</code>, <code>!y</code> must be <code>false</code>.</p>
+        <button id="cont">Continue</button>
+      </article>
 
-        <article id="res-wrong" class="hidden">
-          <p>ACCESS DENIED</p>
-          <p>Both x and (!y && z) must be false if x || (!y && z) is false. (!y && z) is false when at least one of the clause is false. Since z is true, !y must be false, and so y is true.</p>
-          <button id="return-button">Return</button>
-        </article>
-      </div>
-      
+      <article id="res-wrong" class="hidden">
+        <p><span class="warning">ACCESS DENIED</span></p>
+        <p>Both <code>x</code> and <code>(!y &amp;&amp; z)</code> must be <code>false</code> if <code>x || (!y &amp;&amp; z)</code> is <code>false</code>. <code>(!y &amp;&amp; z)</code> is <code>false</code> when at least one of the clauses is <code>false</code>. Since <code>z</code> is <code>true</code>, <code>!y</code> must be <code>false</code>.</p>
+        <button id="return-button">Return</button>
+      </article>
+
     </section>
 
     <footer>
       <a href="index.html">Home</a> &bull;
-      <a href="">About Us</a>
+      <a href="about-us.html">About Us</a>
     </footer>
   </main>
   <script type="text/javascript" src="JavaScript/puzzle7.js"></script>

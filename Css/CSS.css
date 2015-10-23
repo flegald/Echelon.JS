@@ -56,11 +56,6 @@ section.progress {
   min-height: 28px;
 }
 
-section.progress p {
-  margin: 0px;
-  height: 100%;
-}
-
 section.progress div {
   height: 100%;
   background-color: #00F500;
@@ -76,7 +71,7 @@ section.progress div {
 #puzzle-7 { width: 70%; }
 #puzzle-8 { width: 80%; }
 #puzzle-9 { width: 90%; }
-#puzzle-10 { width: 100%; }
+#puzzle-10 { width: 97.5%; }
 
 /* ------- footer and hyperlink ------- */
 footer {
@@ -103,17 +98,18 @@ section.screen {
   color: #00F500;
   min-height: 240px;
   font-size: 1.5em;
-  padding: 6px 12px 12px 12px;
-}
-
-section.screen article {
-  padding: 24px;
+  padding: 24px 36px;
 }
 
 code {
   font-size: 0.75em;
   color: #FF902A;
   line-height: 1.3;
+}
+
+section.screen p {
+  line-height: 1.3;
+  margin: 12px 0px;
 }
 
 /* ------- input ------- */
@@ -124,6 +120,7 @@ section.screen button {
   padding: 4px 12px;
   display: inline-block;
   margin-top: 4px;
+  margin-bottom: 16px;
 }
 
 section.screen button:hover {
@@ -132,19 +129,27 @@ section.screen button:hover {
 }
 
 section.screen button:disabled {
-  border: 2px solid #005500;
-  color: #005500;
+  border: 2px solid #006000;
+  color: #006000;
+  pointer-events: none;
 }
 
 input[type="text"] {
-  margin: 6px;
-  background-color: rgba(0, 245, 0, 0.1);
+  margin: 6px 0px;
+  background-color: rgba(0, 245, 0, 0.15);
   border: 2px solid #00F500;
   padding: 4px;
 }
 
 input[type="text"]:focus {
   border: 2px solid white;
+}
+
+input[type="text"]:disabled {
+  background-color: rgba(0, 245, 0, 0.15);
+  border: 2px solid #006000;
+  color: #006000;
+  pointer-events: none;
 }
 
 /* ------- response ------- */

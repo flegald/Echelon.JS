@@ -1,46 +1,88 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-	<title></title>
-	<link type="text/css" rel="stylesheet" href="Css/normalize.css">
-	<link type="text/css" rel="stylesheet" href="Css/CSS.css">
-	<script src="JavaScript/universal.js"></script>
 
+  <title>Echelon.JS</title>
+  <link rel="stylesheet" type="text/css" href="Css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="Css/CSS.css">
+  <script src="JavaScript/universal.js"></script>
 </head>
+
 <body>
-<main>
-	<h1>Echelon<span id="header2">.JS</span></h1><h2 id="timer"></h2>
+  <main>
+
+    <header>
+      <h1>Echelon<span id="header2">.JS</span></h1>
+    </header>
+
+
+    <div class="fixed-wrapper">
+      <div class="timer-wrapper">
+        <div id="timer-text">Seconds remaining:</div>
+        <div id="timer"></div>
+      </div>
+    </div>
+
+    <section class="progress">
+      <div id="puzzle-3">Door 3/10</div>
+    </section>
+	
+
 	<section class="screen">
-	<p> var droid_Ai = ['emotion', 'logic', 'morals'];</br>
-		var disk_Nexus = ['memory', 'cpu', 'sensory'];</br></br>
-		var droid = [droid_Ai, disk_Nexus];
+		
+		<article id="question">
+			
+			<code>var droid_Ai = ['emotion', 'logic', 'morals'];</br>
+				var disk_Nexus = ['memory', 'cpu', 'sensory'];</br></br>
+				var droid = [droid_Ai, disk_Nexus];</code>
 
-	<p>Android Subject#: CF-201</br>
-		Physical Build: Complete</br>
-		AI sequence: Incomplete</br>
-		Nexus Status: Incomplete</br>
-		Status: Inoperable</br>
-		Stages to be Completed:</br>
-		&nbsp;1: droid[0][2]</br>
-		&nbsp;2: droid[1][1]</br>
-		&nbsp;3: droid[0][0]</br></br>
+			<p>Android Subject#: CF-201</br>
+				Physical Build: Complete</br>
+				AI sequence: Incomplete</br>
+				Nexus Status: Incomplete</br>
+				Status: Inoperable</br>
+				Stages to be Completed:</br>
+				&nbsp;1: <code>droid[0][2]</code></br>
+				&nbsp;2: <code>droid[1][1]</code></br>
+				&nbsp;3: <code>droid[0][0]</code></br></br></p>
 
-		Enter in the values of the stages to be completed.
+				<p>Enter in the values of the stages to be completed.</p>
+
+				<form>
+		     	1:<input type="text" id="aOne"></input></br>
+		     	2:<input type="text" id="aTwo"></input></br>
+		     	3:<input type="text" id="aThree"></input></br></br>
+		     	<button id="subButt">Submit</button>
+		    </form>
+		
+		</article>
 
 
-		<form>
-			1:<input type="text" id="aOne"></input></br></br>
-			2:<input type="text" id="aTwo"></input></br></br>
-			3:<input type="text" id="aThree"></input></br></br>
-			<button class="timeButt" id="subButt">Submit</button>
-		</from>
-		<article id="answer" class="hidden">
-			<p id="corAns">Access Granted</p>
-			<p id="wroAns">Access Denied</p>
+		<article id="res-correct" class="hidden">
+			<p>ACCESS GRANTED</p>
+			<p>The variable <code>droid</code> is an array with its items being two arrays. The first index identifier selects which array we are accessing inside <code>droid</code> and the second index selects the item inside of the nested array</p>
 			<button id="cont">Continue</button>
+		</article>
+		
+		<article id="res-wrong" class="hidden">
+			<p><span id="warning">ACCESS DENIED</span></p>
+			<p>The variable <code>droid</code> is an array with its items being two arrays. The first index identifier selects which array we are accessing inside <code>droid</code> and the second index selects the item inside of the nested array</p>
 			<button id="return-button">Return</button>
 		</article>
-		<section>
-</main>
-<script src="JavaScript/puzzle3.js"></script>
-	</body>
-	</html>
+
+	</section>
+		
+	<footer>
+    <a href="index.html">Home</a> &bull;
+    <a href="about-us.html">About Us</a>
+  </footer>
+
+ </main>
+ <script type="text/javascript" src="JavaScript/puzzle3.js"></script>
+</body>
+</html>
+
+
+
+

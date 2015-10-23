@@ -1,27 +1,21 @@
+var interval;
 
-function disableButt (id) {
-    var subButton = document.getElementsByClassName('timeButt');
-    subButton.disabled = false;
-    var check = document.getElementById(id);
-    if (check.className === 'hidden') {
-        subButton.disabled = true;
-        alert('You Ran Out of Time');
-        window.location.href = ('index.html');
-    }
+function stopTimer() {
+    clearInterval(interval);
 }
 
-function timerAll(secsRemain, id){
-    var check = document.getElementById(id);
-    var interval = setInterval(function() {
+function timerAll(secsRemain){
+    document.getElementById('timer').innerHTML = secsRemain;
+    interval = setInterval(function() {
         document.getElementById('timer').innerHTML = --secsRemain;
 
         if (secsRemain <= 0)
         {
             document.getElementById('timer').innerHTML = 'Time is up';
-            clearInterval(interval);
-            disableButt(id);
-        } else if ((secsRemain > 0) && (check.className !== 'hidden')){
-            document.getElementById('timer').innerHTML = secsRemain;
+            stopTimer();
+            disableButtons();
+            alert('You Ran Out of Time');
+            window.location.href = ('Fail.html');
         }
     }, 1000);
 }
@@ -39,7 +33,7 @@ function getLocal() {
 }
 
 
-
+//Added by Mike- Don's code for getting names for final page.
 
 
 
