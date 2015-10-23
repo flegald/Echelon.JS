@@ -25,6 +25,13 @@ span#header2 {
   font-weight: 400;
 }
 
+#congrats-head {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  color: #FF902A;
+}
+
 /* ------- floating timer ------- */
 div.fixed-wrapper {
   position: fixed;
