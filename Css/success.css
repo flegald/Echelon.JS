@@ -1,14 +1,33 @@
-
-#twinkie {
-  display: block;
-  margin: 100px auto 0 auto;
+.screen h1, .screen h2 {
+  text-align: center;
 }
 
-#vaultdoor {
-  display: block;
-  margin: 0 auto;
+#twinkie {
+  position: absolute;
+  top: 550px;
+  left: 38%;
+
 }
 
 #prize {
+  text-align: center;
+}
+
+#door {
+  margin-top: 75px;
+  left: 38%;
+  position: relative;
+}
+#left {
+  position: absolute;
+}
+#center {
+  position: relative;
+}
+#right {
+  position: relative;
+  left: -235px;
+}
+.screen p {
   text-align: center;
 }
